@@ -4,17 +4,24 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/app.js"></script>
 </head>
-<body>
-	<div class="barra">	</div>
-		<div class="cuerpo">
-			<h1>Inicio De Sesión</h1>
-			<div class="contenedor">
-		  	<img src="imagenes/man.png">
+<body onload="cuyp()">
+	<div class="barra">
+		<img src="imagenes/menu.png">
+
+	</div>
+	<div class="cuerpo">
+		<h1>Inicio De Sesión</h1>
+		<div class="contenedor">
+		  	<img src="imagenes/users.png">
 			<input type="text" name="usuario" placeholder="  usuario" id="usuario">
 			<input type="password" name="password" placeholder="  password" id="password">
-			<input type="submit" value="Iniciar Sesión" >
-			<p>¿Eres nuevo?<a>Registrate</a></p>
+			<input type="submit" value="Iniciar Sesión" onclick="autentificar()">
+			<p>¿Eres nuevo?<a href="registro.html"> Registrate</a></p>
+		</div>
+		<div class="pincorrecto" id="inco">
+			<p>la contraseña es incorrecta</p>
 		</div>
 	</div>
 	
