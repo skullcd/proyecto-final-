@@ -23,14 +23,8 @@ function autentificar(){
  function cargar(){
  	var user = document.getElementById("nusuario");
  	var pasw = document.getElementById("pass");
-
  	localStorage.setItem('user', user.value);
  	localStorage.setItem('password',pasw.value);
-
- 	if (localStorage.clickcount) {
-    localStorage.clickcount = Number(localStorage.clickcount) + 1;
-	} 
-	else {
-    localStorage.clickcount = 1;
-	}
+ 	
+ 	 window.location = "login.html";
  }

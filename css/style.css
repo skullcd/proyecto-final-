@@ -1,6 +1,7 @@
 * {
 	padding: 0;
 	margin: 0;
+	font-family: 'Roboto Condensada', Arial;
 }
 body{
 	background-color: #D9DBD5;
@@ -91,8 +92,47 @@ body{
 	height: 35px;
 
 }
-
 .mal{
 
 	background-color:#D91E18;
+}
+.registro{
+	background-color:orange;
+	position: relative;
+	left: 37%;
+	top: 50px;
+	width: 25%;
+	height:470px;
+	float: left;
+}
+.registro input{
+	position: relative;
+	left: 20%;
+	top: 25px;
+	width:55%;
+	padding: 12px;
+	border:none;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+.registro input[type="submit"]{
+	position: relative;
+	top:30px;
+	width: 63%;
+
+}
+.fecha  input[type="number"]{
+	width: 13%;
+	height: 10px;
+}
+.rb {
+	position: relative;
+	height: 50px;
+	background-color: white;
+}
+.rb p{
+	text-align: center;
+	font-size: 25px;
+	position: relative;
+	top:15px;
 }
