@@ -80,7 +80,6 @@ body{
 }
 .contenedor a{
 	text-decoration: none;
-
 }
 .pincorrecto {
 	background-color: red;
@@ -93,8 +92,12 @@ body{
 
 }
 .mal{
-
-	background-color:#D91E18;
+	background-color:#ED6868;
+	color: white;
+}
+.bien {
+	background-color: #42AD2C;
+	color: white;
 }
 .registro{
 	background-color:orange;
