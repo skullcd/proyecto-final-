@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Index</title>
+</head>
+<body onload="isAuthenticated();">
+	<div id="mensajes"></div>
+	<div id="fondo2"><img onclick="quitar()" src="imagenes/equis.png"></div>
+	<div id="barran"></div>
+	<div class="ba_principal">
+	<div id="archivo"></div>
+	<div id="b_nombre"></div>
+	</div>
+
+	<div id="informacion">
+		<div class="icono"><img src="imagenes/user.png"></div>
+		<div id="sub_nombre"></div>
+		<div id="cerrar">
+		 	<img onclick="out()" src="imagenes/logoutc.png">
+			<h4 onclick="out()">Cerrar Sesión</h4>
+		</div>
+
+	</div>
+	<div class="cuerpo_editor">
+		
+	<h1>TUS DOCUMENTOS</h1>
+
+	<button onclick="nuevo()" class="b_mas"><img src="imagenes/mas.png"></button>
+	</div>
+	
+</body>
+</html>
