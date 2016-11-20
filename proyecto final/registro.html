@@ -1,0 +1,33 @@
+<!DOCTYPE html>s
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registro de Usuario</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/app.js"></script>
+	<link href = "https://fonts.googleapis.com/css?family= Roboto" rel = "stylesheet">
+</head>
+<body onload="isntAuthenticated();">
+    <div class="fondor"><img src="imagenes/fon.png"></div>
+    <div id="barran"></div>
+    <div id="barran_r"></div>
+ 	<div class="registro">
+ 		<div class="rb">
+ 			<p>Regístrate</p>s
+ 		</div>
+ 		<input type="text" name="name" id="name" placeholder="Nombre Completo" onblur="validate('name');">
+		<input type="text" name="user" id="user" placeholder=" Usuario" onblur="validate('user');">
+		<input type="email" name="email" id="email" placeholder="Correo Electronico" onblur="validate('email');">
+		<input type="password" name="password" id="password" placeholder="Contraseña">
+		<input type="password" name="password_confirm" id="password_confirm" placeholder="Confirmar contraseña">
+		<div class="fecha">
+			<input type="number" name="day" id="day" placeholder="Día" min="0" max="31" onblur="validate('day');">
+			<input type="number" name="month" id="month" placeholder="Mes" min="1" max="12" onblur="validate('month');">
+			<input type="number" name="year" id="year" placeholder="Año" min="1990" max="2016" onblur="validate('year');">
+		</div>
+		<input type="submit" value="Registrate" onclick="register();" id="register">
+		<div class="rlog"><p>¿Ya tienes cuenta? <a href="login.html"> ingresa</a></p></div>
+		
+ 	</div>
+</body>
+</html>
