@@ -1,0 +1,22 @@
+/*Class of Bold*/
+
+.boldClass {
+	font-weight: bold;
+}
+
+/*Class of italic*/
+
+.italicClass {
+	font-style: italic;
+}
+
+/*Class of underlined*/
+.underlinedClass {
+	text-decoration: underline;
+}
+
+/*Class of bleeding*/
+
+.bleedingLeftClass {
+	padding-left: 10%; 
+}

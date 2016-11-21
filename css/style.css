@@ -536,7 +536,7 @@ body{
 }
 
 #negro{
-	background-color: black;
+	background-color: #000000;
 }
 #rojo{
 	background-color: #FF8A80;
@@ -619,8 +619,7 @@ body{
 	border:.1px dashed #D5D5D5;
 	text-align: left;
 	font-size: 11px;
-	padding-right: 1%;
-	padding-left: 1%;
+	
 
 }
 
@@ -634,6 +633,7 @@ body{
     font-weight: bold;
     font-size: 20px;
 }
+
 /*#contenido_e textarea{
 	position: absolute;
 	top:230px;

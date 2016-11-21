@@ -232,10 +232,11 @@ function desprincipal(){
 function mostra(){
 	var r = document.getElementById("informacion");
 
-	if(r.style.visibility == "hidden"){
+	if (r.style.visibility == "hidden") {
 		r.style.visibility = "visible";
 	}
-	else{
+	else
+	 {
 		r.style.visibility = "hidden";
 	}
 
@@ -259,51 +260,4 @@ function herramientas(){
 }
 
 
-function colorB(){
-	var eb = document.getElementById("bn");
-
-     alert("negro");
-     eb.style.background = "color:red";
-
-}
-function colorR(){
-	var p = document.getElementById("palette");
-	 alert("rojo");
-}
-
-function colorA(){
-	var p = document.getElementById("palette");
-	 alert("amarillo");
-		
-}
-
-function colorN(){
-	var p = document.getElementById("palette");
-
-		 alert("naranja");
-
-}
-function colorAZ(){
-	var p = document.getElementById("palette");
-
-     alert("azul");
-
-}
-function colorV(){
-	var p = document.getElementById("palette");
-	 alert("verde");
-}
-
-function colorT(){
-	var p = document.getElementById("palette");
-	 alert("turquesa");
-		
-}
-
-function colorG(){
-	var p = document.getElementById("palette");
-
-		 alert("gris");
-
-}
-
+f
