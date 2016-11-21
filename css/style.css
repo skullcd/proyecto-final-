@@ -619,7 +619,10 @@ body{
 	border:.1px dashed #D5D5D5;
 	text-align: left;
 	font-size: 11px;
+}
 
+textarea {
+	resize: none;
 }
 
 #titulo textarea::-webkit-input-placeholder{

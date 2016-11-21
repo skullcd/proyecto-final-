@@ -45,8 +45,9 @@ function color(color) {
 	area.style.color = color;
 }
 
-function bleedingLeft () {
+function bleeding () {
 	var area = document.getElementById('areadetexto');
-
-	area.classList.add('bleedingLeftClass');	
+	var bleeding = document.getElementById('bleeding');
+	  
+	area.style.paddingLeft = bleeding.options[bleeding.selectedIndex].value + '%';
 }
