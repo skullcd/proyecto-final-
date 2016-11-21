@@ -483,7 +483,7 @@ body{
 }
 #icono_h ul li{
 	position: relative;
-	top: 0px;
+	top: 35px;
 	left: 10px;
 	list-style-type: none;
 }
@@ -632,4 +632,38 @@ body{
     font-weight: bold;
     font-size: 20px;
 }
-
+.sangria{
+	position: absolute;
+	height: 200px;
+	width: 140px;
+	display: none;
+	left: -120px;
+	top: 10px;
+}
+.san:hover > .sangria{
+  	display: block;
+ }
+.sangria select{
+	width: 45px;
+	height: 30px;
+	position: absolute;
+	left: 63px;
+	top:13px;
+	outline: none;
+	border:none;
+	float: left;
+}
+.sangria option{
+	outline: none;
+	border:none;
+}
+.sangria button{
+	position: absolute;
+	left: 3px;
+	top: 13px;
+	height: 30px;
+	outline: none;
+	border:none;
+	width: 60px;
+	cursor: pointer;
+}
