@@ -50,9 +50,3 @@ function bleedingLeft () {
 
 	area.classList.add('bleedingLeftClass');	
 }
-
-function bleedingRight () {
-	var area = document.getElementById('areadetexto');
-
-	area.classList.remove('bleedingLeftClass');	
-}

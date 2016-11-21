@@ -611,7 +611,7 @@ body{
 #introduccion textarea{
 	position: absolute;
 	left: 10%;
-	width: 80%;
+	width: 82%;
 	top: 105px;
 	height:420px;
 	background-color:transparent;
@@ -619,7 +619,6 @@ body{
 	border:.1px dashed #D5D5D5;
 	text-align: left;
 	font-size: 11px;
-	
 
 }
 
@@ -634,23 +633,3 @@ body{
     font-size: 20px;
 }
 
-/*#contenido_e textarea{
-	position: absolute;
-	top:230px;
-	left: 12%;
-	width: 76%;
-	height:130px;
-	background-color:transparent;
-	outline: none;
-	border:.1px dashed #D5D5D5;
-}
-#conclusion textarea{
-	position: absolute;
-	top:370px;
-	left: 12%;
-	width: 76%;
-	height:130px;
-	background-color:transparent;
-	outline: none;
-	border:.1px dashed #D5D5D5;
-}*/
