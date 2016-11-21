@@ -40,6 +40,21 @@ body{
 	color:#f7e6e6;
 	
 }
+#barran h4{
+	position: absolute;
+	top:15px;
+	left:14%;
+	color:#f7e6e6;
+	
+}
+#barran h5{
+	position: absolute;
+	top:15px;
+	left:18%;
+	color:#f7e6e6;
+	font-size: 18px;
+	
+}
 #barran_r{
 	background-color: #5274b7;
 	position: absolute;
@@ -469,14 +484,14 @@ body{
 #icono_h ul li{
 	position: relative;
 	top: 0px;
-	left: 5px;
+	left: 10px;
 	list-style-type: none;
 }
 #icono_h img{
 	width: 35px;
 	height: 35px;
 	left: 5px;
-	padding: 15px;
+	padding: 10px;
 	margin-top: 10px;
 	background-color: white;
 	border-radius: 100%;
@@ -485,7 +500,7 @@ body{
 .colores{
 	position: absolute;
 	background-color: white;
-	width: 139px;
+	width: 136px;
 	height: 76px;
 	top: 5px;
 	left: -142px;

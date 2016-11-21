@@ -75,7 +75,7 @@ function isAuthenticated ()
 		var contenedor = document.getElementById("mensajes");
 		var c_nombre = document.getElementById("b_nombre");
 		var sub_nombre = document.getElementById("sub_nombre");
-
+		
 		var c = (localStorage.getItem('user'));;
 		var n = (localStorage.getItem('email'));;
 		var s = (localStorage.getItem('name'));;
@@ -97,8 +97,24 @@ function isAuthenticated ()
 
 		}
 	else { 
-		alert('Necesitas estar autenticado, para poder usar el editor'); 
-		window.location = "login.html";
+		var error = document.getElementById("barran");
+		var a = "Necesitas estar autenticado para poder usar el editor";
+
+		if(error.style.top = "-100%"){
+
+			 	error.style.top ="80px";
+				error.innerHTML = "<h4>"+a+"</h4>";
+
+				 setTimeout(function(){
+					error.style.top = "-100%";},3500);	 	
+
+				  setTimeout(function(){
+					window.location = "login.html";},4000);	 	
+
+
+		 	}
+		 	
+	
 		}
 }
 
@@ -124,9 +140,28 @@ function quitar(){
 function isntAuthenticated () 
 {
 	if (localStorage.getItem('authenticate') == 'true') {
-		alert('Necesitas cerrar sesion para entrar a esta seccion.');
-		window.location = "index.html";
-	}
+
+		var error = document.getElementById("barran");
+		var a = "Necesitas cerrar sesion para poder salir.";
+
+		if(error.style.top = "-100%"){
+
+			 	error.style.top ="80px";
+				error.innerHTML = "<h5>"+a+"</h5>";
+
+				 setTimeout(function(){
+					error.style.top = "-100%";},3500);	 	
+
+				  setTimeout(function(){
+					window.location = "index.html";},4000);	 	
+
+
+		 	}
+		 	
+	
+		}
+
+	
 }
 
 function out(){
