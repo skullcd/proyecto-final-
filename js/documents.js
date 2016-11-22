@@ -3,9 +3,9 @@ function innerDocuments () {
 		localStorage.setItem('documents', '');
 	}
 	
-	var documents = localStorage.getItem('documents');
-	var userDocuments = new Array();
-	var innerDocuments = "";
+	documents = localStorage.getItem('documents');
+	userDocuments = new Array();
+	innerDocuments = "<div></div>";
 	usersDocuments = documents.split('$');
 	
 	for (i = 0; i < usersDocuments.length; i++) {
@@ -13,9 +13,20 @@ function innerDocuments () {
 		
 		if (_documentTemp[0] == localStorage.getItem('email')) {
 			userDocuments.push(usersDocuments[i] + '$');
-			innerDocuments = innerDocuments + "<li><div class='file'><div id='namef'>"+_documentTemp[1]+"</div></div></li>"
+			
+			_title = _documentTemp[1].replace('_', ' ');
+			
+			innerDocuments = innerDocuments + 	"<li>" +
+													"<div class='file' onclick=selectDocument('"+_documentTemp[1]+"')>" +
+														"<div id='namef'>"+_title+"</div>" +
+													"</div>" +
+												"</li>"
 		}
 	}
 	
 	document.getElementById('inDocuments').innerHTML = innerDocuments;
+}
+
+function selectDocument (email, titleOfDocument) {
+	setDocumentToEditor(email, titleOfDocument);
 }

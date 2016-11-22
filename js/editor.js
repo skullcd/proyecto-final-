@@ -6,7 +6,6 @@ var _fontsize = "11";
 var _color = "#000000";
 var _bleeding = "0";
 
-var area = document.getElementById('areadetexto');
 
 function bold () 
 {
@@ -74,6 +73,8 @@ function save () {
 	var _title = document.getElementById('title').value;
 	var _body = document.getElementById('areadetexto').value;
 	var _documents = localStorage.getItem('documents');
+	
+	_title = _title.replace(/\s+/g, '_');
 	
 	var data = localStorage.getItem('email') + '::' + _title + '::' + _body + '::' + _bold + '::' + _italic + '::' + _underlined + '::' + _fontsize + '::' + _color + '::' + _bleeding + '$';
 	
@@ -164,4 +165,8 @@ function documentCollector (foreignDocuments, userDocuments) {
 	}
 	
 	return _documentsTemps;
+}
+
+function setDocumentToEditor (email,titleOfDocument) {
+	alert(email);
 }
