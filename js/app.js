@@ -100,49 +100,45 @@ function isAuthenticated ()
 	    var y = document.getElementById("fondo2");
 
 
-		    if(x.style.visibility = "hidden"){
-				 setTimeout(function(){
-					x.style.visibility ="visible";
-				 	x.style.opacity ="1";
-					contenedor.innerHTML = "<h1>"+p+"</h1>";},100);
-				 	c_nombre.innerHTML = "<h5>"+c+"</h5>";
-				 	sub_nombre.innerHTML = "<h4>"+s+'<br>'+n+"</h4>";
+	    if (x.style.visibility = "hidden") {
+			setTimeout(function(){
+				x.style.visibility ="visible";
+				x.style.opacity ="1";
+				contenedor.innerHTML = "<h1>"+p+"</h1>";},100
+			);
 
-			 }
-
-
+			c_nombre.innerHTML = "<h5>"+c+"</h5>";
+			sub_nombre.innerHTML = "<h4>"+s+'<br>'+n+"</h4>";
 		}
-	else { 
+	} else { 
 		var error = document.getElementById("barran");
 		var a = "Necesitas estar autenticado para poder usar el editor";
 
-		if(error.style.top = "-100%"){
+		if (error.style.top = "-100%") {
 
-			 	error.style.top ="80px";
-				error.innerHTML = "<h4>"+a+"</h4>";
+			error.style.top ="80px";
+			error.innerHTML = "<h4>"+a+"</h4>";
 
-				 setTimeout(function(){
-					error.style.top = "-100%";},3500);	 	
+			setTimeout(function(){
+				error.style.top = "-100%";},3500
+			);	 	
 
-				  setTimeout(function(){
-					window.location = "login.html";},4000);	 	
-
-
-		 	}
-		 	
-	
+			setTimeout(function(){
+				window.location = "login.html";},4000
+			);
 		}
+	}
 }
 
 function quitar(){
 	var quit = document.getElementById("mensajes");
 	var quit2 = document.getElementById("fondo2");
 
-	if(quit.style.visibility = "visible"){
+	if (quit.style.visibility = "visible") {
 		quit.style.visibility= "hidden"
 	}
 
-	if(quit2.style.visibility = "visible"){
+	if (quit2.style.visibility = "visible") {
 		 setTimeout(function(){
 		quit2.style.visibility= "hidden"
 		quit2.style.opacity="0";
@@ -160,31 +156,26 @@ function isntAuthenticated ()
 		var error = document.getElementById("barran");
 		var a = "Necesitas cerrar sesion para poder salir.";
 
-		if(error.style.top = "-100%"){
+		if (error.style.top = "-100%") {
 
-			 	error.style.top ="80px";
-				error.innerHTML = "<h5>"+a+"</h5>";
+		 	error.style.top ="80px";
+			error.innerHTML = "<h5>"+a+"</h5>";
 
-				 setTimeout(function(){
-					error.style.top = "-100%";},3500);	 	
+			setTimeout(function(){
+				error.style.top = "-100%";},3500
+			);	 	
 
-				  setTimeout(function(){
-					window.location = "index.html";},4000);	 	
-
-
-		 	}
-		 	
-	
-		}
-
-	
+			setTimeout(function(){
+				window.location = "index.html";},4000
+			);
+		 }
+	}
 }
 
 function out(){
 	if (localStorage.getItem('authenticate') == 'true'){
 		window.location = "login.html";
 		localStorage.setItem('authenticate', false);
-
 	}
 }
 
