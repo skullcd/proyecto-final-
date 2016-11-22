@@ -38,29 +38,45 @@ function password_confirm ()
 */
 function login ()
 {
-	var user = document.getElementById('user');
+	var username = document.getElementById('user');
 	var password = document.getElementById('password');
 	var contenedor = document.getElementById("barran");
+	
+	var users = localStorage.getItem('users');
+	var _users = new Array();
+	var user = new Array();
+	var _user = new Array();
+	
+	_users = users.split('#');
+	
+	for (i = 0; i < _users.length; i++) {
+		_user = _users[i].split('::');
+		
+		if (_user[1] == username.value &&  _user[3] == password.value) {
+			user = _user;
+		}
+	}
+	
+	localStorage.setItem('name', user[0]);
+	localStorage.setItem('user', user[1]);
+	localStorage.setItem('email', user[2]);
 
 	var p = "El usuaio o la contraseña es incorrecta";
 
-	if (user.value == localStorage.getItem('user') && password.value == localStorage.getItem('password')) {
+	if (username.value == user[1] && password.value == user[3]) {
 		localStorage.setItem('authenticate', true);
 		window.location = "index.html";
-	}
-	else {
+	} else {
+		
 		var mostrar = document.getElementById("barran");
-		 	if(mostrar.style.top= "-100%"){
-			 	mostrar.style.top ="20px";
-				contenedor.innerHTML = "<h3>"+p+"</h3>";
+		if(mostrar.style.top= "-100%"){
+			mostrar.style.top ="20px";
+			contenedor.innerHTML = "<h3>"+p+"</h3>";
 
-				 setTimeout(function(){
-					mostrar.style.top = "-100%";},3500);
-				 	
-
-		 	}
-		 	
-			
+			setTimeout(function(){
+				mostrar.style.top = "-100%";},3500
+			);
+		}	
 	}
 }
 
@@ -203,7 +219,7 @@ function register ()
 		
 		var users = localStorage.getItem('users');
 		
-		var user = name + '::' + user + '::' + email + '::' + password + '::' + day + '::' + month + '::' + year + '@';
+		var user = name + '::' + user + '::' + email + '::' + password + '::' + day + '::' + month + '::' + year + '#';
 		
 		var _users = users + user;
 		
