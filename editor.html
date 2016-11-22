@@ -49,7 +49,7 @@
 				<li> <div class="font_size"><img src="imagenes/size.png">
 
 						<div class="size">
-								<select id="fontSize">
+								<select onchange="fontSize();" id="fontSize">
 									<option value="11">11</option>
 									<option value="12">12</option>
 									<option value="14">14</option>
@@ -58,22 +58,25 @@
 									<option value="20">20</option>
 									<option value="22">22</option>
 									<option value="24">24</option>
+									<option value="26">26</option>
+									<option value="28">28</option>
+									<option value="30">30</option>
+									<option value="32">32</option>
 								</select>
-								<button onclick="fontSize();">Aceptar</button>
 						</div>
 						
 				</div> </li>
 				<li> <div><img src="imagenes/underline.png" onclick="underlined();"></div> </li>
-				<li> <div class="san"><img src="imagenes/marginl.png" onclick="bleedingLeft();">
+				<li> <div class="san"><img src="imagenes/marginl.png" onclick="bleeding();">
 
 					<div class="sangria">
-								<select id="bleeding">
+								<select onchange="bleeding();" id="bleeding">
 									<option value="0">Sin internileado</option>
 									<option value="10">Interlineado 1</option>
 									<option value="15">Interlineado 2</option>
 									<option value="20">Interlineado 3</option>
 								</select>
-								<button onclick="bleeding();">Aceptar</button>
+
 					</div>
 
 

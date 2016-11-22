@@ -258,6 +258,3 @@ function herramientas(){
 		bl.style.visibility = "hidden";
 	}
 }
-
-
-f

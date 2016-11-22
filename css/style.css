@@ -621,9 +621,6 @@ body{
 	font-size: 11px;
 }
 
-textarea {
-	resize: none;
-}
 
 #titulo textarea::-webkit-input-placeholder{
     color:#c4c0c0;
@@ -659,6 +656,9 @@ textarea {
 .sangria option{
 	outline: none;
 	border:none;
+}
+.sangria option:hover{
+	background-color: red;
 }
 .sangria button{
 	position: absolute;

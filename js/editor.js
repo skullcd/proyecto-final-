@@ -50,4 +50,5 @@ function bleeding () {
 	var bleeding = document.getElementById('bleeding');
 	  
 	area.style.paddingLeft = bleeding.options[bleeding.selectedIndex].value + '%';
+	
 }
