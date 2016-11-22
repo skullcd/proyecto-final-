@@ -99,8 +99,6 @@ function save () {
 		}
 	}
 	
-	alert(userDocuments);
-	
 	result =  existAndModified(userDocuments, _title, data);
 	
 	if (! result) {

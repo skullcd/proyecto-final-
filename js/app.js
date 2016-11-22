@@ -219,9 +219,7 @@ function register ()
 		var _users = users + user;
 		
 		localStorage.setItem('users', _users);
-		
-		alert (_users);
-		
+
 		localStorage.setItem('authenticate', false);
 
 		if (contenedor.style.top= "-100%") {
