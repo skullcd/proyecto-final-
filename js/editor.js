@@ -1,5 +1,8 @@
-
-
+/**
+*
+*
+* @return string
+*/
 function bold () 
 {
 	var area = document.getElementById('areadetexto');

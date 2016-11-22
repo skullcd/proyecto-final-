@@ -251,7 +251,7 @@ function herramientas(){
 	var b = document.getElementById("editor");
 	var i = document.getElementsByClassName("b_herramientas");
 
-	if(bl.style.visibility == "hidden"){
+	if(bl.style.visibility != "visible"){
 		bl.style.visibility = "visible";
 	}
 	else{
