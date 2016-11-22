@@ -238,6 +238,7 @@ function register ()
 
 
 }
+
 function desprincipal(){
 	var titulo = document.getElementById("titulo");
 	titulo.style.left = "-19%";

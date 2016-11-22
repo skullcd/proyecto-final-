@@ -39,10 +39,10 @@ function underlined () {
 	
 	if (! area.classList.contains('underlinedClass')) {
 		area.classList.add('underlinedClass');
-		_underline = "si";
+		_underlined = "yes";
 	} else {
 		area.classList.remove('underlinedClass');
-		_underline = "no";
+		_underlined = "no";
 	}
 }
 
@@ -70,7 +70,75 @@ function bleeding () {
 }
 
 function save () {
-	var data = ':' + _bold + ':' + _italic + ':' + _underlined + ':' + _fontsize + ':' + _color + ':' + _bleeding + '@';
+	
+	var _title = document.getElementById('title').value;
+	var _body = document.getElementById('areadetexto').value;
+	var _documents = localStorage.getItem('documents');
+	
+	var data = localStorage.getItem('email') + '::' + _title + '::' + _body + '::' + _bold + '::' + _italic + '::' + _underlined + '::' + _fontsize + '::' + _color + '::' + _bleeding + '$';
+	
+	if (! localStorage.getItem('documents')) {
+		localStorage.setItem('documents', '');
+	}
+	
+	var documents = localStorage.getItem('documents');
+	
+	var usersDocuments = new Array();
+	var userDocuments = new Array();
+	var foreignDocuments = new Array();
+	
+	usersDocuments = documents.split('$');
+	foreignDocuments = usersDocuments;
+	
+	for (i = 0; i < usersDocuments.length; i++) {
+		_documentTemp = usersDocuments[i].split('::');
+		
+		if (_documentTemp[0] == localStorage.getItem('email')) {
+			userDocuments.push(usersDocuments[i]);
+			delete foreignDocuments[i];
+		}
+	}
+	
+	alert(userDocuments);
+	
+	result =  existAndModified(userDocuments, _title, data);
+	
+	if (! result) {
+		__documents = _documents + data;
+		alert('Documento Creado Correctamente');
+		localStorage.setItem('documents', __documents);
+	} else {
+		alert('Documento Modificado Correctamente');
+		localStorage.setItem('documents', documentCollector(foreignDocuments, result));
+	}
+}
 
-	localStorage.setItem('data', data);
+function existAndModified (userDocuments, _title, data) {
+	for (i = 0; i < userDocuments.length; i++) {
+		_documentTemp = userDocuments[i].split('::');
+		
+		if (_documentTemp[1] == _title) {
+			userDocuments[i] = data;
+			return userDocuments;
+		}
+	}
+	return false;
+}
+
+function documentCollector (foreignDocuments, userDocuments) {
+	var _documentsTemps = "";
+	
+	for (i = 0; i < foreignDocuments.length; i++) {
+		if (foreignDocuments[i]) {
+			_documentsTemps = _documentsTemps + foreignDocuments[i] + '$';
+		}
+	}
+	
+	for (i = 0; i < userDocuments.length; i++) {
+		if (userDocuments[i]) {
+			_documentsTemps = _documentsTemps + userDocuments[i] + '$';
+		}
+	}
+	
+	return _documentsTemps;
 }
