@@ -103,10 +103,35 @@ function save () {
 	
 	if (! result) {
 		__documents = _documents + data;
-		alert('Documento Creado Correctamente');
+
+		var mostrar = document.getElementById("barran_r");
+		if(mostrar.style.top= "-100%"){
+			mostrar.style.top ="70px";
+			mostrar.innerHTML = "<h3>"+'Documento Creado Correctamente'+"</h3>";
+
+			setTimeout(function(){
+				mostrar.style.top = "-100%";},3500);
+
+			 setTimeout(function(){
+					window.location = "index.html";},4000);	 
+		}	
+
+
 		localStorage.setItem('documents', __documents);
 	} else {
-		alert('Documento Modificado Correctamente');
+
+		var mostrar = document.getElementById("barran_r");
+		if(mostrar.style.top= "-100%"){
+			mostrar.style.top ="70px";
+			mostrar.innerHTML = "<h4>"+'Documento Modificado Correctamente'+"</h4>";
+
+			setTimeout(function(){
+				mostrar.style.top = "-100%";},3500);
+
+			 setTimeout(function(){
+					window.location = "index.html";},4000);	 
+		}	
+
 		localStorage.setItem('documents', documentCollector(foreignDocuments, result));
 	}
 }
