@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/documents.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Index</title>
 </head>
-<body onload="isAuthenticated();">
+<body onload="isAuthenticated(); innerDocuments();">
 	
 	<div id="barran"></div>
 
@@ -24,12 +25,21 @@
 		</div>
 
 	</div>
-	<div class="cuerpo_editor">
+	<div class="cuerpo_editor" id="inDocuments">
 		<div class="file">
-			<div id="namef"></div>
+			<div id="namef">
+				
+			</div>
 		</div>
 		<div class="file2">
-			<div id="namef"></div>
+			<div id="namef">
+				hi
+			</div>
+		</div>
+		<div class="file2">
+			<div id="namef">
+				hi
+			</div>
 		</div>
 		<h1>TUS DOCUMENTOS</h1>
 
