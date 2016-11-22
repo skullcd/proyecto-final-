@@ -95,21 +95,9 @@ function isAuthenticated ()
 		var c = (localStorage.getItem('user'));;
 		var n = (localStorage.getItem('email'));;
 		var s = (localStorage.getItem('name'));;
-	    var p = ("Bienvenido "+'<br>'+ localStorage.getItem('user'));;
-	    var x = document.getElementById("mensajes");
-	    var y = document.getElementById("fondo2");
-
-
-		    if(x.style.visibility = "hidden"){
-				 setTimeout(function(){
-					x.style.visibility ="visible";
-				 	x.style.opacity ="1";
-					contenedor.innerHTML = "<h1>"+p+"</h1>";},100);
-				 	c_nombre.innerHTML = "<h5>"+c+"</h5>";
-				 	sub_nombre.innerHTML = "<h4>"+s+'<br>'+n+"</h4>";
-
-			 }
-
+	
+		c_nombre.innerHTML = "<h5>"+c+"</h5>";
+		sub_nombre.innerHTML = "<h4>"+s+'<br>'+n+"</h4>";
 
 		}
 	else { 
@@ -134,21 +122,6 @@ function isAuthenticated ()
 		}
 }
 
-function quitar(){
-	var quit = document.getElementById("mensajes");
-	var quit2 = document.getElementById("fondo2");
-
-	if(quit.style.visibility = "visible"){
-		quit.style.visibility= "hidden"
-	}
-
-	if(quit2.style.visibility = "visible"){
-		 setTimeout(function(){
-		quit2.style.visibility= "hidden"
-		quit2.style.opacity="0";
-		quit2.style.opacity = "0";},860);
-	}
-}
 /**
 *
 *
@@ -205,10 +178,33 @@ function register ()
 
 	var contenedor = document.getElementById("barran_r");
 
+	/*if ( (password_confirm != password))
+	{
+		var p = "Las contraseñas no coinciden";
+		var mostrar = document.getElementById("barran");
+		if(mostrar.style.top= "-100%"){
+			mostrar.style.top ="20px";
+			mostrar.innerHTML = "<h1>"+p+"</h1>";
+
+			setTimeout(function(){
+				mostrar.style.top = "-100%";},3500
+			);
+		}	
+	}*/
+
 	if ( (password_confirm != password) || (name == "") || (user == "") || (email == "") 
 	|| (day == "") || (month == "") || (year == "") || (password_confirm == "") )
 	{
-		alert('Datos ingresados incorrectamente');
+		var p = "Los datos ingresados no estan completos";
+		var mostrar = document.getElementById("barran");
+		if(mostrar.style.top= "-100%"){
+			mostrar.style.top ="20px";
+			mostrar.innerHTML = "<h1>"+p+"</h1>";
+
+			setTimeout(function(){
+				mostrar.style.top = "-100%";},3500
+			);
+		}	
 	}
 	else 
 	{
