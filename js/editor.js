@@ -6,6 +6,7 @@ var _fontsize = "11";
 var _color = "#000000";
 var _bleeding = "0";
 
+var area = document.getElementById('areadetexto');
 
 function bold () 
 {
@@ -64,8 +65,29 @@ function bleeding () {
 	var area = document.getElementById('areadetexto');
 	var bleeding = document.getElementById('bleeding');
 	
-	_bleeding = '"' + bleeding.options[bleeding.selectedIndex].value + '"';
+
 	area.style.paddingLeft = bleeding.options[bleeding.selectedIndex].value + '%';
+
+
+	if(bleeding.options[bleeding.selectedIndex].value == "0"){
+		area.style.width = "82%";
+	}
+
+	if(bleeding.options[bleeding.selectedIndex].value == "10"){
+		area.style.width = "72%";
+	}
+
+	if(bleeding.options[bleeding.selectedIndex].value == "15"){
+		area.style.width = "67%";
+	}
+
+	if(bleeding.options[bleeding.selectedIndex].value == "20"){
+		area.style.width = "62%";
+	}
+	if(bleeding.options[bleeding.selectedIndex].value == "25"){
+		area.style.width = "57%";
+	}
+
 }
 
 function save () {
@@ -73,8 +95,6 @@ function save () {
 	var _title = document.getElementById('title').value;
 	var _body = document.getElementById('areadetexto').value;
 	var _documents = localStorage.getItem('documents');
-	
-	_title = _title.replace(/\s+/g, '_');
 	
 	var data = localStorage.getItem('email') + '::' + _title + '::' + _body + '::' + _bold + '::' + _italic + '::' + _underlined + '::' + _fontsize + '::' + _color + '::' + _bleeding + '$';
 	
@@ -111,10 +131,10 @@ function save () {
 			mostrar.innerHTML = "<h3>"+'Documento Creado Correctamente'+"</h3>";
 
 			setTimeout(function(){
-				mostrar.style.top = "-100%";},3500);
+				mostrar.style.top = "-100%";},3000);
 
 			 setTimeout(function(){
-					window.location = "index.html";},4000);	 
+					window.location = "index.html";},3500);	 
 		}	
 
 
@@ -127,10 +147,10 @@ function save () {
 			mostrar.innerHTML = "<h4>"+'Documento Modificado Correctamente'+"</h4>";
 
 			setTimeout(function(){
-				mostrar.style.top = "-100%";},3500);
+				mostrar.style.top = "-100%";},3000);
 
 			 setTimeout(function(){
-					window.location = "index.html";},4000);	 
+					window.location = "index.html";},3500);	 
 		}	
 
 		localStorage.setItem('documents', documentCollector(foreignDocuments, result));
@@ -165,8 +185,4 @@ function documentCollector (foreignDocuments, userDocuments) {
 	}
 	
 	return _documentsTemps;
-}
-
-function setDocumentToEditor (email,titleOfDocument) {
-	alert(email);
 }

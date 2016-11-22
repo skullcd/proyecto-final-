@@ -26,7 +26,7 @@ body{
 	border-radius: 18px;
 	border:1px solid #aa0505;
 	opacity: .85;
-	z-index: 5;
+	z-index: 999999;
 	top:-100%;
 	left: 28%;
 	width: 42%;
@@ -126,7 +126,7 @@ body{
 
 .contenedor input[type="text"], .contenedor input[type="password"]{
 	position: relative;
-	color: 383535;
+	color: #383535;
 	background:rgba(255,255,255,.2);
 	padding:10px;
 	top:105px;
@@ -369,7 +369,7 @@ body{
 	font-weight: bold;
 }
 #archivo img{
-	background-color: none;
+	background-color: #4285F4;
 	position: relative;
 	top: 11px;
 	width: 50px;
@@ -554,8 +554,8 @@ body{
 	list-style-type: none;
 }
 #icono_h img{
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 	left: 5px;
 	padding: 10px;
 	margin-top: 10px;
@@ -710,10 +710,10 @@ body{
   	display: block;
  }
 .sangria select{
-	width: 45px;
+	width: 90px;
 	height: 30px;
 	position: absolute;
-	left: 63px;
+	left: 25px;
 	top:13px;
 	outline: none;
 	border:none;
@@ -771,7 +771,7 @@ body{
 	margin: 30px;
 	left: -30px;
 	color:#606060;
-	padding-top: 8% ;
+	padding-top: 5% ;
 	text-align: center;
 	position: relative;
 	top:133px;
@@ -787,7 +787,7 @@ body{
 	position: relative;
 	z-index: 1;
 	top: 5px;
-	left: 20%;
+	left: 18.5%;
 	cursor: pointer;
 }
 #bn button img{
