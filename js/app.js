@@ -188,33 +188,41 @@ function register ()
 	var year = document. getElementById('year').value;
 
 	var contenedor = document.getElementById("barran_r");
-	var p = "Datos registrados correctamente";
 
-	if (password_confirm != password) {
-		alert('Las contraseñas no coinciden');
+	if ( (password_confirm != password) || (name == "") || (user == "") || (email == "") 
+	|| (day == "") || (month == "") || (year == "") || (password_confirm == "") )
+	{
+		alert('Datos ingresados incorrectamente');
 		window.location = "registro.html";
 	}
 	else 
 	{
-		localStorage.setItem('name', name);
-		localStorage.setItem('user', user);
-		localStorage.setItem('email', email);
-		localStorage.setItem('password', password);
-		localStorage.setItem('day', day);
-		localStorage.setItem('month', month);
-		localStorage.setItem('year', year);
+		if (! localStorage.getItem('users')) {
+			localStorage.setItem('users', '');
+		}
+		
+		var users = localStorage.getItem('users');
+		
+		var user = name + '::' + user + '::' + email + '::' + password + '::' + day + '::' + month + '::' + year + '@';
+		
+		var _users = users + user;
+		
+		localStorage.setItem('users', _users);
+		
+		alert (_users);
+		
 		localStorage.setItem('authenticate', false);
 
-		if(contenedor.style.top= "-100%"){
-			 	contenedor.style.top ="20px";
-			 	contenedor.style.background ="color: #3B5998";
-				contenedor.innerHTML = "<h3>"+p+"</h3>";
+		if (contenedor.style.top= "-100%") {
+			contenedor.style.top ="20px";
+			contenedor.style.background ="color: #3B5998";
+			contenedor.innerHTML = "<h3>Datos registrados correctamente</h3>";
 
-				 setTimeout(function(){
-					contenedor.style.top = "-100%";
-					window.location = "login.html";},3500);
-				}
-		
+			setTimeout(function(){
+				contenedor.style.top = "-100%";
+				window.location = "login.html";},3500
+			);
+		}
 	}
 
 
@@ -229,14 +237,12 @@ function desprincipal(){
 	},200);
 }
 
-function mostra(){
+function showInfo () {
 	var r = document.getElementById("informacion");
 
-	if (r.style.visibility == "hidden") {
+	if (r.style.visibility != "visible") {
 		r.style.visibility = "visible";
-	}
-	else
-	 {
+	} else {
 		r.style.visibility = "hidden";
 	}
 
@@ -248,13 +254,10 @@ function nuevo(){
 
 function herramientas(){
 	var bl = document.getElementById("bh");
-	var b = document.getElementById("editor");
-	var i = document.getElementsByClassName("b_herramientas");
-
-	if(bl.style.visibility != "visible"){
+	
+	if (bl.style.visibility != "visible") {
 		bl.style.visibility = "visible";
-	}
-	else{
+	} else {
 		bl.style.visibility = "hidden";
 	}
 }
