@@ -6,8 +6,6 @@ var _fontsize = "11";
 var _color = "#000000";
 var _bleeding = "0";
 
-var area = document.getElementById('areadetexto');
-
 function bold () 
 {
 	var area = document.getElementById('areadetexto');
@@ -96,17 +94,19 @@ function save () {
 	var _body = document.getElementById('areadetexto').value;
 	var _documents = localStorage.getItem('documents');
 	
+	_title = _title.replace(/\s+/g, '_');
+	
 	var data = localStorage.getItem('email') + '::' + _title + '::' + _body + '::' + _bold + '::' + _italic + '::' + _underlined + '::' + _fontsize + '::' + _color + '::' + _bleeding + '$';
 	
 	if (! localStorage.getItem('documents')) {
 		localStorage.setItem('documents', '');
 	}
 	
-	var documents = localStorage.getItem('documents');
+	documents = localStorage.getItem('documents');
 	
-	var usersDocuments = new Array();
-	var userDocuments = new Array();
-	var foreignDocuments = new Array();
+	usersDocuments = new Array();
+	userDocuments = new Array();
+	foreignDocuments = new Array();
 	
 	usersDocuments = documents.split('$');
 	foreignDocuments = usersDocuments;
@@ -139,6 +139,7 @@ function save () {
 
 
 		localStorage.setItem('documents', __documents);
+		localStorage.setItem('isDocToModified','false');
 	} else {
 
 		var mostrar = document.getElementById("barran_r");
@@ -154,6 +155,7 @@ function save () {
 		}	
 
 		localStorage.setItem('documents', documentCollector(foreignDocuments, result));
+		localStorage.setItem('isDocToModified','false');
 	}
 }
 
@@ -186,3 +188,35 @@ function documentCollector (foreignDocuments, userDocuments) {
 	
 	return _documentsTemps;
 }
+
+function setDocumentToEditor () {
+	if (localStorage.getItem('isDocToModified') == 'true') {
+		_document = localStorage.getItem('documentFinded');
+		chargeData(_document);
+	}
+}
+
+function chargeData (_documentFinded) {
+	_document = _documentFinded.split('::');
+	document.getElementById('title').innerHTML = _document[1].replace('_',' ');
+	var area = document.getElementById('areadetexto');
+	
+	area.innerHTML = _document[2];
+	
+	if (_document[3] === 'yes') {
+		area.classList.add('boldClass');
+	}
+	
+	if (_document[4] === 'yes') {
+		area.classList.add('italicClass');
+	}
+	
+	if (_document[5] === 'yes') {
+		area.classList.add('underlinedClass');
+	}
+	
+	area.style.fontSize = String(_document[6]).concat("px") ;
+	
+	area.style.color = _document[7];
+} 
+
