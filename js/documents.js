@@ -18,10 +18,13 @@ function innerDocuments () {
 			
 			innerDocuments = innerDocuments + 	"<li>" +
 													"<div class='file' onclick=selectDocument('"+_documentTemp[1]+"')>" +
-														"<div id='namef'>"+_title+"</div>" +
+														"<div id='namef'>"+
+															"<img src='imagenes/point.png'>" +
+															_title +
+														"</div>" +
 													"</div>" +
 												"</li>"
-		}//<img src="imagenes/point.png">
+		}
 	}
 	
 	document.getElementById('inDocuments').innerHTML = innerDocuments;

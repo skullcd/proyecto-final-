@@ -67,23 +67,24 @@ function bleeding () {
 	area.style.paddingLeft = bleeding.options[bleeding.selectedIndex].value + '%';
 
 
-	if(bleeding.options[bleeding.selectedIndex].value == "0"){
-		area.style.width = "82%";
+	if (bleeding.options[bleeding.selectedIndex].value == "0") {
+		area.style.width = "84%";
 	}
 
-	if(bleeding.options[bleeding.selectedIndex].value == "10"){
-		area.style.width = "72%";
+	if (bleeding.options[bleeding.selectedIndex].value == "10") {
+		area.style.width = "74%";
 	}
 
-	if(bleeding.options[bleeding.selectedIndex].value == "15"){
-		area.style.width = "67%";
+	if (bleeding.options[bleeding.selectedIndex].value == "15") {
+		area.style.width = "69%";
 	}
 
-	if(bleeding.options[bleeding.selectedIndex].value == "20"){
-		area.style.width = "62%";
+	if (bleeding.options[bleeding.selectedIndex].value == "20") {
+		area.style.width = "64%";
 	}
-	if(bleeding.options[bleeding.selectedIndex].value == "25"){
-		area.style.width = "57%";
+	
+	if (bleeding.options[bleeding.selectedIndex].value == "25") {
+		area.style.width = "59%";
 	}
 
 	_bleeding = '' + bleeding.options[bleeding.selectedIndex].value + '';
