@@ -20,11 +20,10 @@ body{
 	z-index: -1;
 }
 #barran{
-	background-color: #f24141;
+	background-color: white;
 	position: absolute;
-	border-radius: 18px;
-	border:1px solid #aa0505;
-	opacity: .85;
+	border:1px solid #e74c3c;
+	border-bottom:3px solid #e74c3c;
 	z-index: 999999;
 	top:-100%;
 	left: 28%;
@@ -36,28 +35,28 @@ body{
 	position: absolute;
 	top:15px;
 	left:17%;
-	color:#f7e6e6;
+	color:#e74c3c;
 	font-size: 19px;
 }
 #barran h3{
 	position: absolute;
 	top:15px;
 	left:21%;
-	color:#f7e6e6;
+	color:#e74c3c;
 	
 }
 #barran h4{
 	position: absolute;
 	top:15px;
 	left:14%;
-	color:#f7e6e6;
+	color:#e74c3c;
 	
 }
 #barran h5{
 	position: absolute;
 	top:15px;
 	left:18%;
-	color:#f7e6e6;
+	color:#e74c3c;
 	font-size: 18px;
 	
 }
@@ -153,20 +152,20 @@ body{
 	width: 64%;
 	height: 40px;
 	border : none;
-	border:1px solid #ff5c05;;
+	border:1px solid #ff5c05;
 	color: #ff5c05;
 	background-color: white;
 	font-size: 18px;
 }
 .contenedor p{
 	position: relative;
-	top: 185px;
+	top: 170px;
 	left: 35px;
 	color: white;
 }
 .contenedor a{
 	text-decoration: none;
-	color: #2980B9;
+	color: #474749;
 }
 .pincorrecto {
 	background-color: red;
