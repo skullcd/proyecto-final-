@@ -155,6 +155,7 @@ body{
 	color: #ff5c05;
 	background-color: white;
 	font-size: 18px;
+	cursor:pointer;
 }
 .contenedor p{
 	position: relative;
@@ -177,8 +178,8 @@ body{
 
 }
 .mal{
-	background-color:#ED6868;
-	color: white;
+	border:1px solid #ED6868 !important;
+	color: black;
 }
 .bien {
 	background-color: #42AD2C;
@@ -203,7 +204,6 @@ body{
 	width:75%;
 	padding: 12px;
 	border: 1px solid #27c6db;
-	
 	margin-bottom: 17px;
 }
 .registro input[type="submit"]{
@@ -212,9 +212,10 @@ body{
 	left: 19%;
 	width: 63%;
 	background-color: white;
-	color: #27c6db;
+	color: #fa7763;
 	font-size: 18px;
-	border-bottom: 3px solid #27c6db;
+	border: 1px solid #fa7763;
+	border-bottom: 3px solid #fa7763;
 	cursor: pointer;
 }
 .fecha  input[type="number"]{
@@ -238,12 +239,12 @@ body{
 	position: relative;
 	top:65px;
 	left: 10px;
-	color: #fa7763;
+	color: #27c6db;
 }
 .rlog a{
 	cursor:pointer;
 	font-weight:underline;
-	color: #fa7763;
+	color: #27c6db;
 }
 #mensajes{
 	width: 35%;
