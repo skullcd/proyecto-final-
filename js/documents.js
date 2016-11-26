@@ -1,3 +1,27 @@
+function existDocuments () {
+	docuents = localStorage.getItem('documents');
+	usersDocuments = documents.split('$');
+	
+	userDocuments = new Array();
+	
+	for (i = 0; i < usersDocuments.length; i++) {
+		_documentTemp = usersDocuments[i].split('::');
+		
+		if (_documentTemp[0] == localStorage.getItem('email')) {
+			userDocuments.push(usersDocuments[i] + '$');
+		}
+	}
+	
+	if (userDocuments.length == 0) {
+		document.getElementById('docs').innerHTML = "<h1>NO TIENES DOCUMENTOS</h1>";
+	}
+}
+
+function resetDocuments () {
+	localStorage.setItem('documentFinded', '');
+	localStorage.setItem('isDocToModified', 'false');
+}
+
 function innerDocuments () {
 	if (! localStorage.getItem('documents')) {
 		localStorage.setItem('documents', '');
@@ -8,6 +32,7 @@ function innerDocuments () {
 	innerDocuments = "";
 	usersDocuments = documents.split('$');
 	
+		
 	for (i = 0; i < usersDocuments.length; i++) {
 		_documentTemp = usersDocuments[i].split('::');
 		
@@ -22,7 +47,9 @@ function innerDocuments () {
 															_title +
 														"</div>" +
 													"</div>" +
-													"<div class='e'><button>Eliminar</button></div>"+
+													"<div class='e'>" +
+														"<button onclick=deleteDocument('"+_documentTemp[1]+"')>Eliminar</button>" +
+													"</div>" +
 												"</li>"
 		}
 	}
@@ -58,4 +85,17 @@ function selectDocument (titleOfDocument) {
 	localStorage.setItem('isDocToModified', 'true');
 	
 	window.location.href = "editor.html";
+}
+
+
+function deleteDocument (userDoc) {
+	usersDocuments = localStorage.getItem('documents').split('$');
+	
+	for (i = 0; i < usersDocuments.length; i++) {
+		_documentTemp = usersDocuments[i].split('::');
+		
+		if (_documentTemp[0] == localStorage.getItem('email') && _documentTemp[1] == userDoc) {
+			
+		}
+	}
 }
