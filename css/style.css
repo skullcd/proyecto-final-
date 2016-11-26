@@ -152,6 +152,7 @@ body{
 	height: 40px;
 	border : none;
 	border:1px solid #ff5c05;
+	border-bottom:3px solid #ff5c05;
 	color: #ff5c05;
 	background-color: white;
 	font-size: 18px;
