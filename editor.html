@@ -35,8 +35,8 @@
 	<div id="bh">
 		<div id="icono_h">
 			<ul>
-				<li> <div><img src="imagenes/negrita.png" onclick="bold();"></div> </li>
-				<li> <div class="palette"><img src="imagenes/palette.png">
+				<li> <div id="b_acomodar"><img src="imagenes/negrita.png" onclick="bold();"></div> </li>
+				<li><div class="palette"><div id="p_acomodar"><img src="imagenes/palette.png"></div> 
 					<div class="acomodar">
 						<div class="colores">
 								<div onclick="color('#000000');" class="colors" id="negro"></div>
@@ -50,7 +50,7 @@
 							</div>
 					</div>	
 				</div> </li>
-				<li> <div class="font_size"><img src="imagenes/size.png">
+				<li> <div class="font_size"><div id="f_acomodar"><img src="imagenes/size.png"></div>
 
 						<div class="size">
 								<select onchange="fontSize();" id="fontSize">
@@ -70,8 +70,8 @@
 						</div>
 						
 				</div> </li>
-				<li> <div><img src="imagenes/underline.png" onclick="underlined();"></div> </li>
-				<li> <div class="san"><img src="imagenes/marginl.png" onclick="bleeding();">
+				<li> <div id="u_acomodar"><img src="imagenes/underline.png" onclick="underlined();"></div> </li>
+				<li> <div id="san"><img src="imagenes/marginl.png" onclick="bleeding();">
 
 					<div class="sangria">
 								<select onchange="bleeding();" id="bleeding">
@@ -85,11 +85,13 @@
 
 
 				</div> </li>
-				<li> <div><img src="imagenes/cursiva.png" onclick="italic();"></div> </li>
+				<li> <div id="c_acomodar"><img src="imagenes/cursiva.png" onclick="italic();"></div> </li>
 				
 				
 			</ul>
 		</div>
+
+
 	</div>
 </body>
 </html>

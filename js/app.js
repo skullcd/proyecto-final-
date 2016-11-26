@@ -264,10 +264,43 @@ function nuevo(){
 
 function herramientas(){
 	var bl = document.getElementById("bh");
+	var b = document.getElementById("b_acomodar");
+	var p = document.getElementById("p_acomodar");
+	var f = document.getElementById("f_acomodar");
+	var u = document.getElementById("u_acomodar");
+	var s = document.getElementById("san");
+	var c = document.getElementById("c_acomodar");
 	
 	if (bl.style.visibility != "visible") {
 		bl.style.visibility = "visible";
+		setTimeout(function(){
+			b.style.opacity = "1";},220);
+		setTimeout(function(){
+			p.style.opacity = "1";},180);
+		setTimeout(function(){
+			f.style.opacity = "1";},140);
+		setTimeout(function(){
+			u.style.opacity = "1";},100);
+		setTimeout(function(){
+			s.style.opacity = "1";},60);
+		setTimeout(function(){
+			c.style.opacity = "1";},20);
 	} else {
+		setTimeout(function(){
+			b.style.opacity = "0";},20);
+		setTimeout(function(){
+			p.style.opacity = "0";},60);
+		setTimeout(function(){
+			f.style.opacity = "0";},100);
+		setTimeout(function(){
+			u.style.opacity = "0";},140);
+		setTimeout(function(){
+			s.style.opacity = "0";},180);
+		setTimeout(function(){
+			c.style.opacity = "0";},220);
+
 		bl.style.visibility = "hidden";
 	}
+
+	
 }
