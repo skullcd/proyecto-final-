@@ -21,7 +21,7 @@ function innerDocuments () {
 														"<div id='namef'>"+_title+"</div>" +
 													"</div>" +
 												"</li>"
-		}
+		}//<img src="imagenes/point.png">
 	}
 	
 	document.getElementById('inDocuments').innerHTML = innerDocuments;

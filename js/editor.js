@@ -48,7 +48,7 @@ function fontSize () {
 	var area = document.getElementById('areadetexto');
 	var fontsize = document.getElementById('fontSize');
 	
-	_fontsize = '"' + fontsize.options[fontsize.selectedIndex].value + '"';
+	_fontsize = fontsize.options[fontsize.selectedIndex].value;
 	area.style.fontSize = fontsize.options[fontsize.selectedIndex].value + 'px';
 }
 
@@ -86,6 +86,7 @@ function bleeding () {
 		area.style.width = "57%";
 	}
 
+	_bleeding = '' + bleeding.options[bleeding.selectedIndex].value + '';
 }
 
 function save () {
@@ -132,9 +133,6 @@ function save () {
 
 			setTimeout(function(){
 				mostrar.style.top = "-100%";},3000);
-
-			 setTimeout(function(){
-					window.location = "index.html";},3500);	 
 		}	
 
 
@@ -149,9 +147,6 @@ function save () {
 
 			setTimeout(function(){
 				mostrar.style.top = "-100%";},3000);
-
-			 setTimeout(function(){
-					window.location = "index.html";},3500);	 
 		}	
 
 		localStorage.setItem('documents', documentCollector(foreignDocuments, result));
@@ -203,20 +198,22 @@ function chargeData (_documentFinded) {
 	
 	area.innerHTML = _document[2];
 	
-	if (_document[3] === 'yes') {
+	if (_document[3] == 'yes') {
 		area.classList.add('boldClass');
 	}
 	
-	if (_document[4] === 'yes') {
+	if (_document[4] == 'yes') {
 		area.classList.add('italicClass');
 	}
 	
-	if (_document[5] === 'yes') {
+	if (_document[5] == 'yes') {
 		area.classList.add('underlinedClass');
 	}
 	
-	area.style.fontSize = String(_document[6]).concat("px") ;
+	area.style.fontSize = (_document[6] + "px");
 	
 	area.style.color = _document[7];
+
+	area.style.paddingLeft = _document[8] + '%';
 } 
 
