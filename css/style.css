@@ -745,10 +745,9 @@ body{
 	top: 100px;
 	width: 12.5%;
 	height: 220px;
-	background-color: #A8B6C0;
+	background-color: white;
 	z-index: 1;
 	border:.2px solid #BFBFBF;
-	box-shadow: .1px .1px 1px .5px #606060;
 	cursor: pointer;
 }
 .file:hover{
