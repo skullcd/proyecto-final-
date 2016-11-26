@@ -68,23 +68,24 @@ function bleeding () {
 
 
 	if (bleeding.options[bleeding.selectedIndex].value == "0") {
-		area.style.width = "84%";
+		area.style.width = "81%";
+		area.style.paddingLeft = "1%";
 	}
 
 	if (bleeding.options[bleeding.selectedIndex].value == "10") {
-		area.style.width = "74%";
+		area.style.width = "72%";
 	}
 
 	if (bleeding.options[bleeding.selectedIndex].value == "15") {
-		area.style.width = "69%";
+		area.style.width = "67%";
 	}
 
 	if (bleeding.options[bleeding.selectedIndex].value == "20") {
-		area.style.width = "64%";
+		area.style.width = "62%";
 	}
 	
 	if (bleeding.options[bleeding.selectedIndex].value == "25") {
-		area.style.width = "59%";
+		area.style.width = "57%";
 	}
 
 	_bleeding = '' + bleeding.options[bleeding.selectedIndex].value + '';
