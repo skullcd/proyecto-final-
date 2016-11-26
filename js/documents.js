@@ -18,11 +18,11 @@ function innerDocuments () {
 			
 			innerDocuments = innerDocuments + 	"<li>" +
 													"<div class='file' onclick=selectDocument('"+_documentTemp[1]+"')>" +
-														"<div id='namef'>"+
-															"<img src='imagenes/point.png'>" +
+														"<div id='namef'>"+ 
 															_title +
 														"</div>" +
 													"</div>" +
+													"<div class='e'><button>Eliminar</button></div>"+
 												"</li>"
 		}
 	}

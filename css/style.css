@@ -785,6 +785,18 @@ body{
 	font-size: 19px;
 	font-weight: bold;
 }
+.e button{
+	position: absolute;
+	outline: none;
+	border:none;
+	border:1px solid #e74c3c;
+	width: 12.8%;
+	height: 40px;
+	top: 250px;
+	background-color:white;
+	color: #e74c3c;
+	cursor: pointer;
+}
 .savef{
 	position: relative;
 	width: 45px;
