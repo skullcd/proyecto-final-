@@ -95,7 +95,19 @@ function deleteDocument (userDoc) {
 		_documentTemp = usersDocuments[i].split('::');
 		
 		if (_documentTemp[0] == localStorage.getItem('email') && _documentTemp[1] == userDoc) {
-			
+			delete usersDocuments[i];
 		}
 	}
+	
+	restDocuments = "";
+	
+	for (i = 0; i < usersDocuments.length; i++) {
+		if (usersDocuments[i]) {
+			restDocuments = restDocuments + usersDocuments[i] + '$';
+		}
+	}
+	
+	localStorage.setItem('documents', restDocuments);
+	
+	window.location.href = "index.html";
 }
