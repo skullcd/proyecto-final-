@@ -866,13 +866,3 @@ body{
 	opacity: 0;
 	transition: 1s ease-in-out;
 }
-/*.hola{
-	background-color: red;
-	position: relative;
-	width: 100px;
-	height: 100px;
-	transition: 1s ease-in-out;
-}
-.hola:hover{
-	height: 200px;
-}*/
