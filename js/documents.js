@@ -18,6 +18,7 @@ function existDocuments () {
 }
 
 function resetDocuments () {
+	localStorage.setItem('temporalStyles', '')
 	localStorage.setItem('documentFinded', '');
 	localStorage.setItem('isDocToModified', 'false');
 }

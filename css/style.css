@@ -124,7 +124,7 @@ body{
 
 .contenedor input[type="text"], .contenedor input[type="password"]{
 	position: relative;
-	color: #383535;
+	color: white;
 	background:rgba(255,255,255,.3);
 	padding:10px;
 	top:105px;
