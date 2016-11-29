@@ -4,7 +4,7 @@
 	font-family: 'Roboto', sans-serif;
 }
 body{
-	background-color: #eeeeee;
+	background-color: #EBEEF5;
 }
 
 .back img{
@@ -294,7 +294,7 @@ body{
 	z-index: 3;
 }
 .ba_principal{
-	background-color: #64bed8;
+	background-color: #24B0D4;
 	position: fixed;
 	top: 0;
 	z-index: -1;
@@ -310,7 +310,7 @@ body{
 	top: 20%;
 	position: relative;
 	height: 34px;
-	background-color: #266A85;
+	background-color: #47464D;
 	cursor: pointer;
 	box-shadow: .5px .5px 3px black;
 }
@@ -340,7 +340,7 @@ body{
 }
 #archivo2{
 	position: absolute;
-	background-color: #64bed8;
+	background-color: #24B0D4;
 	width: 15%;
 	height: 50px;
 	z-index: -1;
@@ -356,7 +356,7 @@ body{
 	font-weight: bold;
 }
 #archivo2 img{
-	background-color:#64bed8;
+	background-color:#24B0D4;
 	position: relative;
 	top: 11px;
 	width: 50px;
@@ -389,12 +389,12 @@ body{
 }
 .b_mas{
 	position: absolute;
-	left: 90.5%;
+	left: 93.5%;
 	top:570px;
 	width: 62px;
 	height: 62px;
 	border:none;
-	background-color: #266A85;
+	background-color: #47464D;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 100%;
 	z-index: -1;
@@ -482,7 +482,7 @@ body{
 	width: 62px;
 	height: 62px;
 	border:none;
-	background-color: #266A85;
+	background-color: #E02730;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 100%;
 	outline: none;
@@ -537,7 +537,7 @@ body{
 	position: relative;
 	top: 60px;
 	height: 600px;
-	background-color:#EEEEEE;
+	background-color:#E6E9F2;
 	overflow: auto;
 
 }
