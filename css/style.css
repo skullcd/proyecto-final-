@@ -4,7 +4,7 @@
 	font-family: 'Roboto', sans-serif;
 }
 body{
-	background-color: #eeeeee;
+	background-color: #EFF2F7;
 }
 
 .back img{
@@ -60,6 +60,15 @@ body{
 	font-size: 18px;
 	
 }
+#barran h6{
+	position: absolute;
+	top:15px;
+	left:28%;
+	color:#e74c3c;
+	font-size: 18px;
+	
+}
+
 #barran_r{
 	background-color: white;
 	position: absolute;

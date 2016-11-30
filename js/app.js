@@ -178,21 +178,22 @@ function register ()
 
 	var contenedor = document.getElementById("barran_r");
 
-	/*if ( (password_confirm != password))
+	if ( (password_confirm != password))
 	{
 		var p = "Las contraseñas no coinciden";
 		var mostrar = document.getElementById("barran");
 		if(mostrar.style.top= "-100%"){
 			mostrar.style.top ="20px";
-			mostrar.innerHTML = "<h1>"+p+"</h1>";
+			mostrar.innerHTML = "<h6>"+p+"</h6>";
 
 			setTimeout(function(){
 				mostrar.style.top = "-100%";},3500
 			);
 		}	
-	}*/
+	}
 
-	if ( (password_confirm != password) || (name == "") || (user == "") || (email == "") 
+
+	if ((name == "") || (user == "") || (email == "") 
 	|| (day == "") || (month == "") || (year == "") || (password_confirm == "") )
 	{
 		var p = "Los datos ingresados no estan completos";
