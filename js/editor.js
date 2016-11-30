@@ -217,7 +217,9 @@ function chargeData (_documentFinded) {
 function chargeStyle () {
 	style = localStorage.getItem('stylesInit').split('::');
 	
-	var area = document.getElementById('areadetexto');
+	area = document.getElementById('areadetexto');
+	document.getElementById('fontSize').value = style[3];
+	document.getElementById('bleeding').value = style[5];
 	
 	if (style[0] == 'yes') {
 		area.classList.add('boldClass');
