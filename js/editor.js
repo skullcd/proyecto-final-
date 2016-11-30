@@ -214,7 +214,7 @@ function chargeData (_documentFinded) {
 	area.innerHTML = _document[2];
 }
 
-function initData () {
+function chargeStyle () {
 	style = localStorage.getItem('stylesInit').split('::');
 	
 	var area = document.getElementById('areadetexto');
@@ -236,5 +236,27 @@ function initData () {
 	area.style.color = style[4];
 
 	area.style.paddingLeft = style[5] + '%';
+	
+	if (style[5] == "0") {
+		area.style.width = "81%";
+		area.style.paddingLeft = "1%";
+	}
+
+	if (style[5] == "10") {
+		area.style.width = "72%";
+	}
+
+	if (style[5] == "15") {
+		area.style.width = "67%";
+	}
+
+	if (style[5] == "20") {
+		area.style.width = "62%";
+	}
+	
+	if (style[5] == "25") {
+		area.style.width = "57%";
+	}
+	
 } 
 
