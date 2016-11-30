@@ -490,12 +490,12 @@ body{
 }
 .b_herramientas{
 	position: fixed;
-	left:90.5%;
+	left:93.5%;
 	top:570px;
 	width: 62px;
 	height: 62px;
 	border:none;
-	background-color: #E02730;
+	background-color: #47464D;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 100%;
 	outline: none;
@@ -519,7 +519,7 @@ body{
 	background-color:transparent;
 	position: fixed;
 	top: 75px;
-	left: 89.5%;
+	left: 92.57%;
 	width: 100px;
 	height: 490px;
 	transition: .1s ease-in-out;
