@@ -1,10 +1,21 @@
 
-var _bold = "no";
-var _italic = "no";
-var _underlined = "no";
-var _fontsize = "11";
-var _color = "#000000";
-var _bleeding = "0";
+var _bold = "";
+var _italic = "";
+var _underlined = "";
+var _fontsize = "";
+var _color = "";
+var _bleeding = "";
+
+function styleInit () {
+	style = localStorage.getItem('stylesInit').split('::');
+	
+	_bold = style[0];
+	_italic = style[1];
+	_underlined = style[2];
+	_fontsize = style[3];
+	_color = style[4];
+	_bleeding = style[5];
+}
 
 function bold () 
 {
@@ -88,7 +99,7 @@ function bleeding () {
 		area.style.width = "57%";
 	}
 
-	_bleeding = '' + bleeding.options[bleeding.selectedIndex].value + '';
+	_bleeding = bleeding.options[bleeding.selectedIndex].value;
 }
 
 function save () {
@@ -195,27 +206,35 @@ function setDocumentToEditor () {
 
 function chargeData (_documentFinded) {
 	_document = _documentFinded.split('::');
+	
 	document.getElementById('title').innerHTML = _document[1].replace('_',' ');
+	
 	var area = document.getElementById('areadetexto');
 	
 	area.innerHTML = _document[2];
+}
+
+function initData () {
+	style = localStorage.getItem('stylesInit').split('::');
 	
-	if (_document[3] == 'yes') {
+	var area = document.getElementById('areadetexto');
+	
+	if (style[0] == 'yes') {
 		area.classList.add('boldClass');
 	}
 	
-	if (_document[4] == 'yes') {
+	if (style[1] == 'yes') {
 		area.classList.add('italicClass');
 	}
 	
-	if (_document[5] == 'yes') {
+	if (style[2] == 'yes') {
 		area.classList.add('underlinedClass');
 	}
 	
-	area.style.fontSize = (_document[6] + "px");
+	area.style.fontSize = (style[3] + "px");
 	
-	area.style.color = _document[7];
+	area.style.color = style[4];
 
-	area.style.paddingLeft = _document[8] + '%';
+	area.style.paddingLeft = style[5] + '%';
 } 
 

@@ -21,6 +21,7 @@ function resetDocuments () {
 	localStorage.setItem('temporalStyles', '')
 	localStorage.setItem('documentFinded', '');
 	localStorage.setItem('isDocToModified', 'false');
+	localStorage.setItem('stylesInit', 'no::no::no::11::#000000::0');
 }
 
 function innerDocuments () {
@@ -82,6 +83,11 @@ function selectDocument (titleOfDocument) {
 		}
 	}
 	
+	docStyle = _document.split('::');
+	
+	style = docStyle[3] + '::' + docStyle[4] + '::' + docStyle[5] + '::' + docStyle[6] + '::' + docStyle[7] + '::' + docStyle[8];
+	
+	localStorage.setItem('stylesInit', style);
 	localStorage.setItem('documentFinded', _document);
 	localStorage.setItem('isDocToModified', 'true');
 	
