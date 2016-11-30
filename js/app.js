@@ -5,14 +5,39 @@
 function validate (id) 
 {
 	var auth = document.getElementById(id);
+	var day  = document.getElementById("day");
+	var name  = document.getElementById("name");
+	var month = document.getElementById("month");
 
-	if (auth.value == "")
+	if (auth.value == "" || name.required == "invalid"){
 		auth.classList.add('mal');
-	else
+	}
+	else {
 		auth.classList.remove('mal');
+	}
+
+
+	if (month.value == "2") { 
+
+		day.max = "28";
+	}
+	else {
+		day.max = "31";
+	}
+
+	if (month.value == "4" || month.value == "6" || month.value == "6" || month.value == "11") { 
+
+		if (day.value >= "31") {
+			day.max = "30";
+		}
+		else {
+			day.max = "31";
+		}
+
+	}
+
+
 }
-
-
 /**
 *
 *
@@ -223,7 +248,7 @@ function register ()
 
 		localStorage.setItem('authenticate', false);
 
-		if (contenedor.style.top= "-100%") {
+		if (contenedor.style.top= "-100%" && (password_confirm == password)) {
 			contenedor.style.top ="20px";
 			contenedor.style.background ="color: #3B5998";
 			contenedor.innerHTML = "<h3>Datos registrados correctamente</h3>";

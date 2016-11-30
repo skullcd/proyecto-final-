@@ -15,14 +15,14 @@
  		<div class="rb">
  			<p>Regístrate</p>
  		</div>
- 		<input type="text" name="name" id="name" placeholder="Nombre Completo" onblur="validate('name');">
+ 		<input type="text" name="name" id="name"  pattern="[A-Za-z]" placeholder="Nombre Completo" onblur="validate('name');">
 		<input type="text" name="user" id="user" placeholder=" Usuario" onblur="validate('user');">
-		<input type="email" name="email" id="email" placeholder="Correo Electronico" onblur="validate('email');">
+		<input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Correo Electronico" onblur="validate('email');">
 		<input type="password" name="password" id="password" placeholder="Contraseña" onblur="validate('password');">
 		<input type="password" name="password_confirm" id="password_confirm" placeholder="Confirmar contraseña" onblur="validate('password_confirm');">
 		<div class="fecha">
-			<input type="number" name="day" id="day" placeholder="Día" min="0" max="31" onblur="validate('day');">
 			<input type="number" name="month" id="month" placeholder="Mes" min="1" max="12" onblur="validate('month');">
+			<input type="number" name="day" id="day" placeholder="Día" min="0" max="31" onblur="validate('day');">
 			<input type="number" name="year" id="year" placeholder="Año" min="1960" max="2016" onblur="validate('year');">
 		</div>
 		<input type="submit" value="Regístrate" onclick="register();" id="register">
