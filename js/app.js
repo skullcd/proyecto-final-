@@ -8,6 +8,7 @@ function validate (id)
 	var day  = document.getElementById("day");
 	var name  = document.getElementById("name");
 	var month = document.getElementById("month");
+	var email = document.getElementById("email").value;
 
 	if (auth.value == "" || name.required == "invalid"){
 		auth.classList.add('mal');
@@ -15,8 +16,6 @@ function validate (id)
 	else {
 		auth.classList.remove('mal');
 	}
-
-
 	if (month.value == "2") { 
 
 		day.max = "28";
@@ -276,10 +275,10 @@ function desprincipal(){
 function showInfo () {
 	var r = document.getElementById("informacion");
 
-	if (r.style.visibility != "visible") {
-		r.style.visibility = "visible";
+	if (r.style.opacity != "1") {
+		r.style.opacity = "1";
 	} else {
-		r.style.visibility = "hidden";
+		r.style.opacity = "0";
 	}
 
 }
@@ -300,30 +299,30 @@ function herramientas(){
 	if (bl.style.visibility != "visible") {
 		bl.style.visibility = "visible";
 		setTimeout(function(){
-			b.style.opacity = "1";},220);
+			b.style.opacity = "1";},120);
 		setTimeout(function(){
-			p.style.opacity = "1";},180);
+			p.style.opacity = "1";},100);
 		setTimeout(function(){
-			f.style.opacity = "1";},140);
+			f.style.opacity = "1";},80);
 		setTimeout(function(){
-			u.style.opacity = "1";},100);
+			u.style.opacity = "1";},60);
 		setTimeout(function(){
-			s.style.opacity = "1";},60);
+			s.style.opacity = "1";},40);
 		setTimeout(function(){
 			c.style.opacity = "1";},20);
 	} else {
 		setTimeout(function(){
 			b.style.opacity = "0";},20);
 		setTimeout(function(){
-			p.style.opacity = "0";},60);
+			p.style.opacity = "0";},40);
 		setTimeout(function(){
-			f.style.opacity = "0";},100);
+			f.style.opacity = "0";},60);
 		setTimeout(function(){
-			u.style.opacity = "0";},140);
+			u.style.opacity = "0";},80);
 		setTimeout(function(){
-			s.style.opacity = "0";},180);
+			s.style.opacity = "0";},100);
 		setTimeout(function(){
-			c.style.opacity = "0";},220);
+			c.style.opacity = "0";},120);
 
 		bl.style.visibility = "hidden";
 	}

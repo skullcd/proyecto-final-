@@ -114,10 +114,19 @@ body {
 }
 .titulo h2{
 	position: absolute;
-	color:black;
+	color:#115b82;
 	left: 52%;
 	font-size: 85px;
 	transition: .8s ease-in-out;
+}
+.tituloR{
+	position: absolute;
+	left: 10%;
+	top: 250px;
+	color: white;
+	width: 21%;
+	height: 100px;
+	font-size: 75px;
 }
 .contenedor{
 	position: relative;
@@ -159,13 +168,13 @@ body {
 	left: 30px;
 	width: 64%;
 	height: 40px;
-	border : none;
 	border:1px solid #ff5c05;
-	border-bottom:3px solid #ff5c05;
+	border-bottom: 3px solid #ff5c05;
 	color: #ff5c05;
 	background-color: white;
 	font-size: 18px;
 	cursor:pointer;
+	transition: 0.2s all;
 }
 .contenedor p{
 	position: relative;
@@ -175,7 +184,7 @@ body {
 }
 .contenedor a{
 	text-decoration: none;
-	color: #474749;
+	color: #fec254;
 }
 .pincorrecto {
 	background-color: red;
@@ -196,30 +205,34 @@ body {
 	color: white;
 }
 .registro{
-	background-color:white;
 	position: relative;
 	left: 65%;
-	top: 50px;
+	top: 100px;
 	width: 25%;
 	height:560px;
 	float: left;
-	box-shadow: 0px 1px 1px black;
 
 }
+.registro input::-webkit-input-placeholder{
+	color:white;
+}
+
 .registro input{
 	position: relative;
 	outline: none;
 	left: 08.8%;
 	top: 30px;
-	width:75%;
+	width:76.5%;
 	padding: 12px;
 	border: 1px solid #27c6db;
 	margin-bottom: 17px;
+	box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1);
+	background:rgba(256,256,256,.4);
 }
 .registro input[type="submit"]{
 	position: relative;
 	top:60px;
-	left: 19%;
+	left: 20%;
 	width: 63%;
 	background-color: white;
 	color: #fa7763;
@@ -233,7 +246,7 @@ body {
 	width: 19.5%;
 	height: 10px;
 }
-.rb {
+/*.rb {
 	position: relative;
 	height: 50px;
 	background-color: #fa7763;
@@ -244,17 +257,17 @@ body {
 	position: relative;
 	top:13px;
 	color: white;
-}
+}*/
 .rlog p{
 	position: relative;
 	top:65px;
-	left: 10px;
-	color: #27c6db;
+	left: 20px;
+	color: white;
 }
 .rlog a{
 	cursor:pointer;
-	font-weight:underline;
-	color: #27c6db;
+	text-decoration: none;
+	color: #fec254;
 }
 #mensajes{
 	width: 35%;
@@ -319,9 +332,13 @@ body {
 	top: 20%;
 	position: relative;
 	height: 34px;
-	background-color: #47464D;
+	background-color:#335775;
 	cursor: pointer;
 	box-shadow: .5px .5px 3px black;
+}
+#b_nombre:hover{
+	opacity: .8;
+
 }
 #b_nombre h5{
 	color: white;
@@ -332,7 +349,6 @@ body {
 }
 #archivo{
 	position: absolute;
-	background-color: #50B1D4; 
 	width: 15%;
 	height: 50px;
 	z-index: -1;
@@ -349,7 +365,6 @@ body {
 }
 #archivo2{
 	position: absolute;
-	background-color: #24B0D4;
 	width: 15%;
 	height: 50px;
 	z-index: -1;
@@ -365,7 +380,6 @@ body {
 	font-weight: bold;
 }
 #archivo2 img{
-	background-color:#24B0D4;
 	position: relative;
 	top: 11px;
 	width: 50px;
@@ -373,7 +387,6 @@ body {
 }
 #bn a{
 	text-decoration: none;
-	background-color: #50B1D4;
 	font-size: 34px;
 	color: white;
 	text-align: center;
@@ -383,7 +396,6 @@ body {
 	font-weight: bold;
 }
 #archivo img{
-	background-color: #50B1D4;
 	position: relative;
 	top: 11px;
 	width: 50px;
@@ -403,7 +415,7 @@ body {
 	width: 62px;
 	height: 62px;
 	border:none;
-	background-color: #47464D;
+	background-color: #E06055;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 100%;
 	z-index: -1;
@@ -434,7 +446,8 @@ body {
 	left: 78%;
 	border-bottom:3px solid #606060;
 	left: 80.7%;
-	visibility: hidden;
+	opacity: 0;
+	transition: .5s ease-in-out;
 
 }
 .icono img{
@@ -490,7 +503,7 @@ body {
 	width: 62px;
 	height: 62px;
 	border:none;
-	background-color: #47464D;
+	background-color: #E06055;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 100%;
 	outline: none;
@@ -523,22 +536,23 @@ body {
 }
 
 #bn{
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+	z-index: 99999;
 	position: fixed;
 	width: 100%;
 	height: 60px;
-	background-color: #50B1D4;
+	background-color: #24B0D4;
 }
 #editor{
 	position: relative;
 	width:60%;
-	height: 560px;
+	height: 550px;
 	top: 20px;
 	left: 18%;
 	background-color: white;
 	margin-bottom: 20px;
 	transition: .5s ease-in-out;
-	border:.5px solid #E6E6E6;
-	box-shadow: 2px 2px 5px 1px #E6E6E6;
+	box-shadow: 0 0 10px rgba(155,155,155,0.2);
 	overflow: auto;
 }
 .ce{
@@ -680,27 +694,25 @@ body {
 	cursor: pointer;
 }
 #titulo textarea{
-	position: absolute;
 	top:40px;
-	left: 10%;
 	width: 82%;
 	height:40px;
-	background-color:transparent;
-	outline: none;
 	border:.2px dashed #D5D5D5;
 	padding-top: 2%;
 	text-align: center;
 	font-size: 20px;
 }
-
-#introduccion textarea{
+textarea{
 	position: absolute;
+	resize: none;
+	background-color:transparent;
+	outline: none;
 	left: 10%;
+}
+#introduccion textarea{
 	width: 81%;
 	top: 105px;
 	height:420px;
-	background-color:transparent;
-	outline: none;
 	border:.1px dashed #D5D5D5;
 	text-align: left;
 	padding-left: 1%;
@@ -761,11 +773,11 @@ body {
 	height: 220px;
 	background-color: white;
 	z-index: 1;
-	border:.2px solid #BFBFBF;
 	cursor: pointer;
+	box-shadow: 0 0 4px rgba(0,0,0,0.2);
 }
 .file:hover{
-	border:.1px solid #09222C ;
+	border: 1px solid rgba(0,0,0,0.2);
 }
 .f ul li{
 	float: left;
@@ -791,7 +803,7 @@ body {
 	padding-top: 5% ;
 	text-align: center;
 	position: relative;
-	top:130px;
+	top:136px;
 	background-color:white ;
 	border-top: .3px solid #B9B9B9;
 	font-size: 19px;
@@ -802,27 +814,36 @@ body {
 	outline: none;
 	border:none;
 	border:.1px solid #e74c3c;
-	border-bottom:3px solid #e74c3c;
+	border-bottom: 3px solid #e74c3c;
 	width: 12.8%;
 	height: 40px;
 	top: 250px;
 	background-color:white;
 	color: #e74c3c;
 	cursor: pointer;
+	transition: .1s all;
+}
+.e button:hover{
+	background-color: #e74c3c;
+	color: white;
+	border-color: white;
+	border-bottom: 3px solid white;
 }
 .savef{
 	position: relative;
-	width: 45px;
-	height: 42px;
+	width: 41px;
+	height: 41px;
 	left: 78%;
 }
+
 .savef img{
 	background-color: #50B1D4;
 	position: relative;
-	width: 40px;
-	height: 40px;
+	width: 39px;
+	height: 39px;
 	cursor: pointer;
-	top: 12px;
+	top: 13px;
+
 }
 .back2{
 	position: relative;
