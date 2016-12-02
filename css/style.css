@@ -136,6 +136,16 @@ body {
 	height: 100px;
 	font-size: 75px;
 }
+.tituloR h1{
+	position: absolute;
+	font-size:80px;
+}
+.tituloR h2{
+	position: absolute;
+	font-size: 80px;
+	left: 74%;
+	color: #115b82;
+}
 .contenedor{
 	position: relative;
 	visibility: hidden;
@@ -230,7 +240,8 @@ body {
 	position: relative;
 	outline: none;
 	left: 08.8%;
-	top: 30px;
+	color:white;
+	top: 40px;
 	width:76.5%;
 	padding: 12px;
 	border: 1px solid #27c6db;
@@ -240,7 +251,7 @@ body {
 }
 .registro input[type="submit"]{
 	position: relative;
-	top:60px;
+	top:70px;
 	left: 20%;
 	width: 63%;
 	background-color: white;
@@ -255,21 +266,10 @@ body {
 	width: 19.5%;
 	height: 10px;
 }
-/*.rb {
-	position: relative;
-	height: 50px;
-	background-color: #fa7763;
-}
-.rb p{
-	text-align: center;
-	font-size: 25px;
-	position: relative;
-	top:13px;
-	color: white;
-}*/
+
 .rlog p{
 	position: relative;
-	top:65px;
+	top:75px;
 	left: 20px;
 	color: white;
 }
