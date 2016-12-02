@@ -108,6 +108,12 @@ function save () {
 	var _body = document.getElementById('areadetexto').value;
 	var _documents = localStorage.getItem('documents');
 	
+	if (_title == "") {
+		alert('Error nab');
+		
+		return false;
+	}
+	
 	_title = _title.replace(/\s+/g, '_');
 	
 	var data = localStorage.getItem('email') + '::' + _title + '::' + _body + '::' + _bold + '::' + _italic + '::' + _underlined + '::' + _fontsize + '::' + _color + '::' + _bleeding + '$';

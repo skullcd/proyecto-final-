@@ -43,6 +43,10 @@ function innerDocuments () {
 			
 			_title = _documentTemp[1].replace('_', ' ');
 			
+			if (_title.length > 16 ) {
+				_title = "Inconcistencia";
+			}
+			
 			innerDocuments = innerDocuments + 	"<li>" +
 													"<div class='file' onclick=selectDocument('"+_documentTemp[1]+"')>" +
 														"<div id='namef'>"+ 
