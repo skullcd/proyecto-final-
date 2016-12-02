@@ -38,6 +38,14 @@ body {
 	color:#e74c3c;
 	font-size: 19px;
 }
+#barran h2{
+	position: absolute;
+	top:15px;
+	left:27%;
+	color:#e74c3c;
+	font-size: 20px;
+	
+}
 #barran h3{
 	position: absolute;
 	top:15px;
@@ -144,6 +152,7 @@ body {
 	position: relative;
 	color: white;
 	background:rgba(255,255,255,.3);
+	box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1);
 	padding:10px;
 	top:105px;
 	width: 60%;

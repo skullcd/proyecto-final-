@@ -109,7 +109,12 @@ function save () {
 	var _documents = localStorage.getItem('documents');
 	
 	if (_title == "") {
-		alert('Error nab');
+		var mostrar = document.getElementById("barran");
+		if(mostrar.style.top= "-100%"){
+			mostrar.style.top ="70px";
+			mostrar.innerHTML = "<h2>"+'Ingresa titulo para guardar'+"</h2>";
+			setTimeout(function(){mostrar.style.top = "-100%";},3000);
+		}	
 		
 		return false;
 	}
