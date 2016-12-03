@@ -1,4 +1,15 @@
 
+function emailExist (string) 
+{
+	users = localStorage.getItem('users').split('#');
+	
+	for (i = 0; i < users.length; i++) {
+		if (users[i].split('::')[2] == string) {return true}
+	}
+	
+	return false;
+}
+
 function isEmail (string) 
 {
 	for (i = 0; i < string.length; i++) {
@@ -38,6 +49,8 @@ function validateEach ()
 	if (email == "") { return "Ingresa un correo electronico"; }
 	
 	if (isEmail(email)) { return "El email ingresado no es valido"; }
+	
+	if (emailExist(email)) {return "El correo ingresado ya existe"; }
 	
 	if (password == "") { return "Ingresa una contraseña valida"; }
 	
