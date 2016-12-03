@@ -189,23 +189,23 @@ function out ()
 */
 function register () 
 {
-	var name = document.getElementById('name').value;
-	var user = document.getElementById('user').value;
-	var email = document.getElementById('email').value;
-	var password = document.getElementById('password').value;
-	var password_confirm = document.getElementById('password_confirm').value;
-	var day = document.getElementById('day').value;
-	var month = document.getElementById('month').value;
-	var year = document. getElementById('year').value;
-	var contenedor = document.getElementById("barran_r");
-
+	name = document.getElementById('name').value;
+	user = document.getElementById('user').value;
+	email = document.getElementById('email').value;
+	password = document.getElementById('password').value;
+	password_confirm = document.getElementById('password_confirm').value;
+	day = document.getElementById('day').value;
+	month = document.getElementById('month').value;
+	year = document.getElementById('year').value;
+	contenedor = document.getElementById("barran_r");
 	
 	validate = validateEach();
 	
 	if (validate) {
-		var mostrar = document.getElementById("barra_l");
-		if(mostrar.style.left= "100%"){
+		mostrar = document.getElementById("barra_l");
+		if (mostrar.style.left= "100%") {
 			mostrar.style.left ="60.5%";
+			
 			mostrar.innerHTML = "<h6>"+validate+"</h6>";
 
 			setTimeout(function(){ mostrar.style.left = "100%"; },2000);
