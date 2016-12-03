@@ -121,7 +121,9 @@ function save () {
 	
 	_title = _title.replace(/\s+/g, '_');
 	
-	var data = localStorage.getItem('email') + '::' + _title + '::' + _body + '::' + _bold + '::' + _italic + '::' + _underlined + '::' + _fontsize + '::' + _color + '::' + _bleeding + '$';
+	identifier = _title + '.trabajo++';
+	
+	data = localStorage.getItem('email') + '::' + _title + '::' + _body + '::' + _bold + '::' + _italic + '::' + _underlined + '::' + _fontsize + '::' + _color + '::' + _bleeding + '::' + identifier + '$';
 	
 	if (! localStorage.getItem('documents')) {
 		localStorage.setItem('documents', '');
@@ -145,32 +147,29 @@ function save () {
 		}
 	}
 	
-	result =  existAndModified(userDocuments, _title, data);
+	result = existAndModified(userDocuments, localStorage.getItem('identifier'), data);
 	
 	if (! result) {
 		__documents = _documents + data;
 
 		var mostrar = document.getElementById("barran_r");
-		if(mostrar.style.top= "-100%"){
+		if (mostrar.style.top= "-100%") {
 			mostrar.style.top ="70px";
 			mostrar.innerHTML = "<h3>"+'Documento Creado Correctamente'+"</h3>";
-
-			setTimeout(function(){
-				mostrar.style.top = "-100%";},3000);
+			setTimeout(function(){mostrar.style.top = "-100%";},3000);
 		}	
-
 
 		localStorage.setItem('documents', __documents);
 		localStorage.setItem('isDocToModified','false');
+		
 	} else {
 
 		var mostrar = document.getElementById("barran_r");
-		if(mostrar.style.top= "-100%"){
+		if (mostrar.style.top= "-100%") {
 			mostrar.style.top ="70px";
 			mostrar.innerHTML = "<h4>"+'Documento Modificado Correctamente'+"</h4>";
 
-			setTimeout(function(){
-				mostrar.style.top = "-100%";},3000);
+			setTimeout(function(){mostrar.style.top = "-100%";},3000);
 		}	
 
 		localStorage.setItem('documents', documentCollector(foreignDocuments, result));
@@ -182,7 +181,7 @@ function existAndModified (userDocuments, _title, data) {
 	for (i = 0; i < userDocuments.length; i++) {
 		_documentTemp = userDocuments[i].split('::');
 		
-		if (_documentTemp[1] == _title) {
+		if (_documentTemp[9] == _title) {
 			userDocuments[i] = data;
 			return userDocuments;
 		}
@@ -215,12 +214,45 @@ function setDocumentToEditor () {
 	}
 }
 
+
+function herramientas ()
+{
+	var bl = document.getElementById("bh");
+	var b = document.getElementById("b_acomodar");
+	var p = document.getElementById("p_acomodar");
+	var f = document.getElementById("f_acomodar");
+	var u = document.getElementById("u_acomodar");
+	var s = document.getElementById("san");
+	var c = document.getElementById("c_acomodar");
+	
+	if (bl.style.visibility != "visible") {
+		bl.style.visibility = "visible";
+		setTimeout( function () { b.style.opacity = "1"; },120);
+		setTimeout( function () { p.style.opacity = "1"; },100);
+		setTimeout( function () { f.style.opacity = "1"; },80);
+		setTimeout( function () { u.style.opacity = "1"; },60);
+		setTimeout( function () { s.style.opacity = "1"; },40);
+		setTimeout( function () { c.style.opacity = "1"; },20);
+	} else {
+		setTimeout( function () { b.style.opacity = "0"; },20);
+		setTimeout( function () { p.style.opacity = "0"; },40);
+		setTimeout( function () { f.style.opacity = "0"; },60);
+		setTimeout( function () { u.style.opacity = "0"; },80);
+		setTimeout( function () { s.style.opacity = "0"; },100);
+		setTimeout( function () { c.style.opacity = "0"; },120);
+
+		bl.style.visibility = "hidden";
+	}
+}
+
 function chargeData (_documentFinded) {
 	_document = _documentFinded.split('::');
 	
 	document.getElementById('title').innerHTML = _document[1].replace('_',' ');
 	
 	var area = document.getElementById('areadetexto');
+	
+	localStorage.setItem('identifier', _document[9]);
 	
 	area.innerHTML = _document[2];
 }
@@ -232,17 +264,11 @@ function chargeStyle () {
 	document.getElementById('fontSize').value = style[3];
 	document.getElementById('bleeding').value = style[5];
 	
-	if (style[0] == 'yes') {
-		area.classList.add('boldClass');
-	}
+	if (style[0] == 'yes') { area.classList.add('boldClass');}
 	
-	if (style[1] == 'yes') {
-		area.classList.add('italicClass');
-	}
+	if (style[1] == 'yes') {area.classList.add('italicClass');}
 	
-	if (style[2] == 'yes') {
-		area.classList.add('underlinedClass');
-	}
+	if (style[2] == 'yes') {area.classList.add('underlinedClass');}
 	
 	area.style.fontSize = (style[3] + "px");
 	
@@ -255,21 +281,13 @@ function chargeStyle () {
 		area.style.paddingLeft = "1%";
 	}
 
-	if (style[5] == "10") {
-		area.style.width = "72%";
-	}
+	if (style[5] == "10") {area.style.width = "72%";}
 
-	if (style[5] == "15") {
-		area.style.width = "67%";
-	}
+	if (style[5] == "15") {area.style.width = "67%";}
 
-	if (style[5] == "20") {
-		area.style.width = "62%";
-	}
+	if (style[5] == "20") {area.style.width = "62%";}
 	
-	if (style[5] == "25") {
-		area.style.width = "57%";
-	}
+	if (style[5] == "25") {area.style.width = "57%";}
 	
 } 
 

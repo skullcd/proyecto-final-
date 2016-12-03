@@ -18,10 +18,15 @@ function existDocuments () {
 }
 
 function resetDocuments () {
-	localStorage.setItem('temporalStyles', '')
+	localStorage.setItem('temporalStyles', '');
+	
 	localStorage.setItem('documentFinded', '');
+	
 	localStorage.setItem('isDocToModified', 'false');
+	
 	localStorage.setItem('stylesInit', 'no::no::no::11::#000000::0');
+	
+	localStorage.setItem('identifier', '.trabajo++');
 }
 
 function innerDocuments () {
@@ -44,17 +49,23 @@ function innerDocuments () {
 			_title = _documentTemp[1].replace('_', ' ');
 			
 			if (_title.length > 16 ) {
-				_title = "Inconcistencia";
+				__title = "";
+				
+				for (i = 0; i < 13; i++) {
+					__title = __title + _title.charAt(i);
+				}
+				
+				_title = __title + '...';
 			}
 			
 			innerDocuments = innerDocuments + 	"<li>" +
-													"<div class='file' onclick=selectDocument('"+_documentTemp[1]+"')>" +
+													"<div class='file' onclick=selectDocument('"+_documentTemp[9]+"')>" +
 														"<div id='namef'>"+ 
 															_title +
 														"</div>" +
 													"</div>" +
 													"<div class='e'>" +
-														"<button onclick=deleteDocument('"+_documentTemp[1]+"')>Eliminar</button>" +
+														"<button onclick=deleteDocument('"+_documentTemp[9]+"')>Eliminar</button>" +
 													"</div>" +
 												"</li>"
 		}
@@ -82,7 +93,7 @@ function selectDocument (titleOfDocument) {
 	for (i = 0; i < userDocuments.length; i++) {
 		_docTemp = userDocuments[i].split('::');
 		
-		if (_docTemp[1] == titleOfDocument) {
+		if (_docTemp[9] == titleOfDocument) {
 			_document = userDocuments[i];
 		}
 	}
@@ -105,7 +116,7 @@ function deleteDocument (userDoc) {
 	for (i = 0; i < usersDocuments.length; i++) {
 		_documentTemp = usersDocuments[i].split('::');
 		
-		if (_documentTemp[0] == localStorage.getItem('email') && _documentTemp[1] == userDoc) {
+		if (_documentTemp[0] == localStorage.getItem('email') && _documentTemp[9] == userDoc) {
 			delete usersDocuments[i];
 		}
 	}
