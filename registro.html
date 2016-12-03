@@ -9,6 +9,7 @@
 <body onload="isntAuthenticated();">
     <div class="fondor"><img src="imagenes/balloon.jpg"></div>
     <div id="barran"></div>
+    <div id="barra_l"></div>
     <div id="barran_r"></div>
     <div class="tituloR">
     		<h1>Regis</h1>
@@ -21,8 +22,8 @@
 		<input type="password" name="password" id="password" placeholder="Contraseña" onblur="validate('password');">
 		<input type="password" name="password_confirm" id="password_confirm" placeholder="Confirmar contraseña" onblur="validate('password_confirm');">
 		<div class="fecha">
-			<input type="number" name="month" id="month" placeholder="Mes" min="1" max="12" onblur="validate('month');">
 			<input type="number" name="day" id="day" placeholder="Día" min="0" max="31" onblur="validate('day');">
+			<input type="number" name="month" id="month" placeholder="Mes" min="1" max="12" onblur="validate('month');">
 			<input type="number" name="year" id="year" placeholder="Año" min="1940" max="2016" onblur="validate('year');">
 		</div>
 		<input type="submit" value="Regístrate" onclick="register();" id="register">

@@ -31,25 +31,26 @@ function validateEach ()
 	var month = document.getElementById('month').value;
 	var year = document. getElementById('year').value;
 	
-	if (name == "") { return "Ingresa el nombre"; }
+	if (name == "") {  return "Ingresa tu  nombre completo"; }
 	
-	if (user == "") { return "Ingresa un nombre de usuario"; }
+	if (user == "") { return " Ingresa un nombre de usuario"; }
 	
-	if (email == "") { return "Ingresa un Email"; }
+	if (email == "") { return "Ingresa un correo electronico"; }
 	
-	if (isEmail(email)) { return "Lo ingresado no es un email"; }
+	if (isEmail(email)) { return "El email ingresado no es valido"; }
 	
-	if (password == "") { return "Ingresa Password"; }
+	if (password == "") { return "Ingresa una contraseña valida"; }
 	
-	if (password_confirm == "") { return "Ingresa Password confirm"; }
+	if (password_confirm == "") { return "Vuelve a ingresar la contraseña"; }
+
+	if (password != password_confirm) {return "Las contraseñas no coinciden" }
+
+	if (month == "") { return "Ingresa el mes de tu nacimiento"; }
+
+	if (day == "") { return "Ingresa el día de tu nacimiento"; }
 	
-	if (day == "") { return "Ingresa día"; }
+	if (year == "") { return "Ingresa el año de tu nacimiento"; }
 	
-	if (month == "") { return "Ingresa mes"; }
-	
-	if (year == "") { return "Ingresa año"; }
-	
-	if (password != password_confirm) {return "Contraseñas no coinciden" }
 	
 	return false;
 }
@@ -196,19 +197,18 @@ function register ()
 	var day = document.getElementById('day').value;
 	var month = document.getElementById('month').value;
 	var year = document. getElementById('year').value;
-
 	var contenedor = document.getElementById("barran_r");
 
 	
 	validate = validateEach();
 	
 	if (validate) {
-		var mostrar = document.getElementById("barran");
-		if(mostrar.style.top= "-100%"){
-			mostrar.style.top ="20px";
+		var mostrar = document.getElementById("barra_l");
+		if(mostrar.style.left= "100%"){
+			mostrar.style.left ="60.5%";
 			mostrar.innerHTML = "<h6>"+validate+"</h6>";
 
-			setTimeout(function(){ mostrar.style.top = "-100%"; },3500);
+			setTimeout(function(){ mostrar.style.left = "100%"; },2000);
 			
 			return false;
 		}	

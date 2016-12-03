@@ -80,7 +80,6 @@ body {
 #barran_r{
 	background-color: white;
 	position: absolute;
-
 	z-index: 1;
 	top:-100%;
 	left: 28%;
@@ -93,7 +92,7 @@ body {
 #barran_r h3{
 	position: absolute;
 	top:15px;
-	left:23%;
+	left:25%;
 	color:#5274b7;
 	
 }
@@ -104,6 +103,27 @@ body {
 	color:#5274b7;
 	font-size: 19px;
 }
+
+#barra_l{
+	z-index: 999999;
+	position: fixed;
+	background-color: white;
+	border:1px solid #e74c3c;
+	border-bottom:4px solid #e74c3c;
+	width: 35%;
+	left: 100%;
+	top: 50px;
+	height: 60px;
+	transition: .8s ease-in-out;
+}
+#barra_l h6{
+	color:#e74c3c;
+	position: relative;
+	top:15px;
+	left: 20.5%;
+	font-size: 20px;
+}
+
 .titulo{
 	position: relative; 
 	top:230px ;
