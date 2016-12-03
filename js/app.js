@@ -13,7 +13,7 @@ function emailExist (string)
 function isEmail (string) 
 {
 	for (i = 0; i < string.length; i++) {
-		if (string.charAt(i) == "@") { return false; }
+		if (string.charAt(i) == '@') { return false; }
 	}
 	
 	return true;
