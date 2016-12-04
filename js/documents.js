@@ -51,7 +51,7 @@ function innerDocuments () {
 			if (_title.length > 16 ) {
 				__title = "";
 				
-				for (i = 0; i < 13; i++) {
+				for (i = 0; i < 12; i++) {
 					__title = __title + _title.charAt(i);
 				}
 				
@@ -103,7 +103,9 @@ function selectDocument (titleOfDocument) {
 	style = docStyle[3] + '::' + docStyle[4] + '::' + docStyle[5] + '::' + docStyle[6] + '::' + docStyle[7] + '::' + docStyle[8];
 	
 	localStorage.setItem('stylesInit', style);
+	
 	localStorage.setItem('documentFinded', _document);
+	
 	localStorage.setItem('isDocToModified', 'true');
 	
 	window.location.href = "editor.html";
