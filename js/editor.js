@@ -6,7 +6,8 @@ var _fontsize = "";
 var _color = "";
 var _bleeding = "";
 
-function styleInit () {
+function styleInit ()
+{
 	style = localStorage.getItem('stylesInit').split('::');
 	
 	_bold = style[0];
@@ -151,6 +152,8 @@ function save () {
 	
 	if (! result) {
 		__documents = _documents + data;
+		
+		localStorage.setItem('identifier', identifier);
 
 		var mostrar = document.getElementById("barran_r");
 		if (mostrar.style.top= "-100%") {
@@ -169,7 +172,7 @@ function save () {
 			mostrar.style.top ="70px";
 			mostrar.innerHTML = "<h4>"+'Documento Modificado Correctamente'+"</h4>";
 
-			setTimeout(function(){mostrar.style.top = "-100%";},3000);
+			setTimeout(function(){ mostrar.style.top = "-100%"; },3000);
 		}	
 
 		localStorage.setItem('documents', documentCollector(foreignDocuments, result));
