@@ -216,12 +216,12 @@ function register ()
 	
 	if (validate) {
 		mostrar = document.getElementById("barra_l");
-		if (mostrar.style.left= "100%") {
-			mostrar.style.left ="60.5%";
+		if (mostrar.style.top= "100%") {
+			mostrar.style.top ="30px";
 			
 			mostrar.innerHTML = "<h6>"+validate+"</h6>";
 
-			setTimeout(function(){ mostrar.style.left = "100%"; },2000);
+			setTimeout(function(){ mostrar.style.top = "-100%"; },2000);
 			
 			return false;
 		}	
