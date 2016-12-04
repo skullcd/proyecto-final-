@@ -97,6 +97,10 @@ function login ()
 	password = document.getElementById('password');
 	contenedor = document.getElementById("barran");
 	
+	if (! localStorage.getItem('users')) {
+		localStorage.setItem('users', '');
+	}
+	
 	users = localStorage.getItem('users');
 	_users = new Array();
 	user = new Array();
@@ -146,10 +150,10 @@ function isAuthenticated ()
 		var c_nombre = document.getElementById("b_nombre");
 		var sub_nombre = document.getElementById("sub_nombre");
 		
-		var c = (localStorage.getItem('user'));;
-		var n = (localStorage.getItem('email'));;
-		var s = (localStorage.getItem('name'));;
-	
+		var c = localStorage.getItem('user');
+		var n = localStorage.getItem('email');
+		var s = localStorage.getItem('name');
+		
 		c_nombre.innerHTML = "<h5>"+c+"</h5>";
 		sub_nombre.innerHTML = "<h4>"+s+'<br>'+n+"</h4>";
 
@@ -211,6 +215,10 @@ function register ()
 	month = document.getElementById('month').value;
 	year = document.getElementById('year').value;
 	contenedor = document.getElementById("barran_r");
+	
+	if (! localStorage.getItem('users')) {
+		localStorage.setItem('users', '');
+	}
 	
 	validate = validateEach();
 	
