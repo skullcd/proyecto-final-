@@ -19,6 +19,19 @@ function isEmail (string)
 	return true;
 }
 
+function uniqueUser (user) 
+{
+	users = localStorage.getItem('users').split('#');
+	
+	for (i = 0; i < users.length; i++) {
+		if (users[i].split('::')[1] == user) {
+			return true;
+		}
+	}
+	
+	return false;
+}
+
 /**
 *
 *
@@ -44,7 +57,9 @@ function validateEach ()
 	
 	if (name == "") {  return "Ingresa tu  nombre completo"; }
 	
-	if (user == "") { return " Ingresa un nombre de usuario"; }
+	if (user == "") { return "Ingresa un nombre de usuario"; }
+	
+	if (uniqueUser(user)) { return "El usuario ingresado, ya esta registrado"; }
 	
 	if (email == "") { return "Ingresa un correo electronico"; }
 	
