@@ -564,15 +564,16 @@ body {
 	opacity: .7;
 }
 #bh{
-	background-color:transparent;
 	position: fixed;
+	background-color: transparent;
 	top: 75px;
-	left: 92.57%;
-	width: 100px;
-	height: 490px;
-	transition: .1s ease-in-out;
+	left: 80.57%;
+	width: 500px;
+	margin-top: 490px;
+	height: 0px;
+	transition: .5s ease-in-out;
 	visibility: hidden;
-
+	overflow: hidden;
 }
 
 #bn{
@@ -622,7 +623,7 @@ body {
 #icono_h ul li{
 	position: relative;
 	top: 35px;
-	left: 10px;
+	left: 35%;
 	list-style-type: none;
 }
 #icono_h img{

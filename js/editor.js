@@ -230,6 +230,8 @@ function herramientas ()
 	
 	if (bl.style.visibility != "visible") {
 		bl.style.visibility = "visible";
+		bl.style.marginTop = "0px";
+		bl.style.height = "490px";
 		setTimeout( function () { b.style.opacity = "1"; },120);
 		setTimeout( function () { p.style.opacity = "1"; },100);
 		setTimeout( function () { f.style.opacity = "1"; },80);
@@ -243,7 +245,8 @@ function herramientas ()
 		setTimeout( function () { u.style.opacity = "0"; },80);
 		setTimeout( function () { s.style.opacity = "0"; },100);
 		setTimeout( function () { c.style.opacity = "0"; },120);
-
+		bl.style.height = "0px";
+		bl.style.marginTop = "490px";
 		bl.style.visibility = "hidden";
 	}
 }
